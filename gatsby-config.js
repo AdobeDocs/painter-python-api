@@ -46,22 +46,22 @@ module.exports = {
 				path: "/guides/",
 				pages: [
 					{
-						title : "Home",
+						title : "Guides home",
 						path: "/guides/",
 					}
 				]
 			},
 			{
-				title: "Shader API",
+				title: "Python API",
 				header: true,
 				path: "/api/",
 				pages: [
 					{
-						title : "Home",
+						title : "API home",
 						path: "/api/",
 					}
 				]
-			},
+			}
 		]
   	},
 	plugins: [`@adobe/gatsby-theme-aio`]
