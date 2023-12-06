@@ -1,11 +1,14 @@
 ---
-title: Overview - Cat Analytics
-description: This is the overview page of Cat Analytics
+title: Substance 3D Painter - Python API
+description: This is the overview page of Substance 3D Painter Python API
 contributors:
-  - https://github.com/icaraps
+  - https://github.com/Froyok
+featured: true
 ---
 
-<Hero slots="heading, text"/>
+<Hero slots="image, heading, text" background="rgb(1, 46, 24)" hideBreadcrumbNav={true} />
+
+![Hero image](./hero.png)
 
 # Substance 3D Painter - Python API
 
