@@ -46,7 +46,7 @@ module.exports = {
 				path: "/guides/",
 				pages: [
 					{
-						title : "Guides home",
+						title : "Home",
 						path: "/guides/",
 					}
 				]
@@ -57,7 +57,7 @@ module.exports = {
 				path: "/api/",
 				pages: [
 					{
-						title : "API home",
+						title : "Home",
 						path: "/api/",
 					}
 				]
