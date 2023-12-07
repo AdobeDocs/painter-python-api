@@ -20,10 +20,7 @@ Changelog — Substance 3D Painter Python API 0.2.11 documentation
 
 
 
-<table>
-	<tr><td><strong>Test 1</strong></td></tr>
-	<tr><td>Test 2</td></tr>
-</table>
+
 
 
 
