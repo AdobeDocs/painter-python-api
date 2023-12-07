@@ -20,16 +20,40 @@ To add a new Python plugin, a simple script file can be created into the plugin 
 
 To access the python folder, navigate to:
 
-| Platform | Version | Path |
-| -------- | ------- | ------- |
-| Windows  | **7.2** or newer | C:\Users\username\Documents\Adobe\Adobe Substance 3D Painter |
-| Windows | Legacy | C:\Users\username\Documents\Allegorithmic\Substance Painter |
-| - | - | - |
-| Mac | **7.2** or newer | /Users/username/Documents/Adobe/Adobe Substance 3D Painter |
-| Mac | Legacy | /Users/username/Documents/Allegorithmic/Substance Painter |
-| - | - | - |
-| Linux | **7.2** or newer | /home/username/Documents/Adobe/Adobe Substance 3D Painter |
-| Linux | Legacy | /home/username/Documents/Allegorithmic/Substance Painter |
+<table columnWidths="20,20,60">
+	<tr>
+		<th>Platform</th>
+		<th>Version</th>
+		<th>Path</th>
+	</tr>
+	<tr>
+		<td rowspan="2">Windows</td>
+		<td><strong>7.2</strong> or newer</td>
+		<td>C:\Users\username\Documents\Adobe\Adobe Substance 3D Painter</td>
+	</tr>
+	<tr>
+		<td>Legacy</td>
+		<td>C:\Users\username\Documents\Allegorithmic\Substance Painter</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Mac</td>
+		<td><strong>7.2</strong> or newer</td>
+		<td>/Users/username/Documents/Adobe/Adobe Substance 3D Painter</td>
+	</tr>
+	<tr>
+		<td>Legacy</td>
+		<td>/Users/username/Documents/Allegorithmic/Substance Painter</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Linux</td>
+		<td><strong>7.2</strong> or newer</td>
+		<td>/home/username/Documents/Adobe/Adobe Substance 3D Painter</td>
+	</tr>
+	<tr>
+		<td>Legacy</td>
+		<td>/home/username/Documents/Allegorithmic/Substance Painter</td>
+	</tr>
+</table>
 
 > **Note**: The folder "**plugins**" is for Javascript plugins. Python plugins need to go under the "**python/plugins**" folder.
 
