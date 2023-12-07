@@ -26,11 +26,11 @@ Check out the API to get a listing of all the functionalities available. The gui
 
 Get started with the Painter's Python API.
 
-- [Creating a python plugin](guides/creating-python-plugin/)
+- [Creating a python plugin](guides/creating-python-plugin.md)
   This step by step guide describes how to create a simple Python plugin that allows to export channels of a Texture Set with a specific export preset.
-- [Using external Python modules](guides/using-external-modules/)
+- [Using external Python modules](guides/using-external-modules.md)
   This page shows how to use external modules with the Python integration by using the PYTHONPATH environment variable.
-- [Loading external plugins](guides/loading-external-plugins/)
+- [Loading external plugins](guides/loading-external-plugins.md)
   This page explains how to use an environment variable to define an additional location to load Python plugins.
 
 ---
