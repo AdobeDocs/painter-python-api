@@ -13,7 +13,7 @@ keywords:
 
 
 
-export module — Substance 3D Painter Python API 0.2.11 documentation
+*export* module — Substance 3D Painter Python API 0.2.11 documentation
 
 
 
@@ -30,7 +30,7 @@ export module — Substance 3D Painter Python API 0.2.11 documentation
 
 
 
-export module
+*export* module
 =============
 
 
@@ -174,7 +174,7 @@ return value contains the list of texture files written to disk.
 
 
 The status of the return value can never be Error, any error causing the
-export to fail will raise an exception instead. However if the export fails,
+*export* to fail will raise an exception instead. However if the *export* fails,
 the associated event ExportTextureEnded will indeed receive Error as a
 status.
 If the export is cancelled by the user, the function return value will have
