@@ -1,5 +1,5 @@
 ---
-title: creating-python-plugin | Painter Python API
+title: creating-python-plugin - Painter Python API
 description: Substance 3D Painter - Python API
 keywords:
   - Creative Cloud

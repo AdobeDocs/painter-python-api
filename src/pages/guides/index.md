@@ -1,5 +1,5 @@
 ---
-title: index | Painter Python API
+title: index - Painter Python API
 description: Substance 3D Painter - Python API
 keywords:
   - Creative Cloud

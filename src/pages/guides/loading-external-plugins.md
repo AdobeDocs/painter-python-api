@@ -1,5 +1,5 @@
 ---
-title: loading-external-plugins | Painter Python API
+title: loading-external-plugins - Painter Python API
 description: Substance 3D Painter - Python API
 keywords:
   - Creative Cloud
