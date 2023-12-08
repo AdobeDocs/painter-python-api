@@ -94,6 +94,10 @@ To access the python folder, navigate to:
 	</tr>
 </table>
 
+| Test | Test2 |
+|------|-------|
+| Value | Value 2 |
+
 > **Note**: The folder "**plugins**" is for Javascript plugins. Python plugins need to go under the "**python/plugins**" folder.
 
 ## 2 - Creating the new plugin file
