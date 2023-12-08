@@ -8,42 +8,6 @@ keywords:
   - Painter
 ---
 
-yolo
-
-<dl class="py method">
-<dt class="sig sig-object py" id="substance_painter.resource.Shelf.import_resource">
-<span class="sig-name descname"><span class="pre">import_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.resource.Usage" title="substance_painter.resource.Usage"><span class="pre">Usage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uuid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.resource.Resource" title="substance_painter.resource.Resource"><span class="pre">Resource</span></a></span></span><a class="headerlink" href="#substance_painter.resource.Shelf.import_resource" title="Link to this definition"></a></dt>
-<dd><p>Import a resource into this shelf.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>file_path</strong> (<em>str</em>) – The file path to the resource to be imported.</p></li>
-<li><p><strong>resource_usage</strong> (<a class="reference internal" href="#substance_painter.resource.Usage" title="substance_painter.resource.Usage"><em>Usage</em></a>) – The resource usage.</p></li>
-<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the resource if different from the
-file name.</p></li>
-<li><p><strong>group</strong> (<em>str</em><em>, </em><em>opional</em>) – An optional group name, can be used in resource
-queries.</p></li>
-<li><p><strong>uuid</strong> (<em>str</em><em>, </em><em>opional</em>) – An optional uuid. If a resource already exists with
-the same uuid, it will be replaced.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The imported resource object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.resource.Resource" title="substance_painter.resource.Resource">Resource</a></p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ValueError</strong> – If parameters validation failed.</p></li>
-<li><p><strong>RuntimeError</strong> – If import failed.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
-    services yet.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 Creating a Python plugin
 ========================
 
@@ -57,7 +21,6 @@ To add a new Python plugin, a simple script file can be created into the plugin 
 To access the python folder, navigate to:
 
 <table columnWidths="20,20,60">
-	<tbody class="spectrum-Table-body">
 	<tr>
 		<th>Platform</th>
 		<th>Version</th>
@@ -93,12 +56,7 @@ To access the python folder, navigate to:
 		<td>Legacy</td>
 		<td>/home/username/Documents/Allegorithmic/Substance Painter</td>
 	</tr>
-	</tbody>
 </table>
-
-| Test | Test2 |
-|------|-------|
-| Value | Value 2 |
 
 > **Note**: The folder "**plugins**" is for Javascript plugins. Python plugins need to go under the "**python/plugins**" folder.
 

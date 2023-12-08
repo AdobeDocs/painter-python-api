@@ -13,32 +13,19 @@ keywords:
 
 
 
-Versioning Plugin — Substance 3D Painter Python API 0.2.11 documentation
+<div class="wy-grid-for-nav">
 
 
+<div class="wy-nav-content">
+<div class="rst-content style-external-links">
 
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
 
-
-
-
-
-
-
-
-
-
-
-
-
-Versioning Plugin
-=================
-
-
-
-versioning_plugin.py
-
-```python
-##########################################################################
+<h1>Versioning Plugin<a class="headerlink" href="#versioning-plugin" title="Link to this heading"> </a></h1>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">versioning_plugin.py</span><a class="headerlink" href="#id1" title="Link to this code"> </a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre>##########################################################################
 # ADOBE CONFIDENTIAL
 # ___________________
 # Copyright 2010-2020 Adobe
@@ -217,16 +204,16 @@ def close_plugin():
 
 if __name__ == "__main__":
 	start_plugin()
+</pre></div>
+</div>
+</div>
 
-```
+</div>
+</div>
 
+</div>
+</div>
 
-
-
-
-
-
-
-
+</div>
 
 
