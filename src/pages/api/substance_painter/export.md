@@ -39,7 +39,7 @@ existing export presets.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p class><code class="docutils literal notranslate">Success</code></p></td>
+<tr class="row-even"><td> `Success` </td>
 <td><p class>The export was successful.</p></td>
 </tr>
 <tr class="row-odd"><td><p class><code class="docutils literal notranslate">Cancelled</code></p></td>
