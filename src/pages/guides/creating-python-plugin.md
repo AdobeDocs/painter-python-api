@@ -57,6 +57,7 @@ To add a new Python plugin, a simple script file can be created into the plugin 
 To access the python folder, navigate to:
 
 <table columnWidths="20,20,60">
+	<tbody class="spectrum-Table-body">
 	<tr>
 		<th>Platform</th>
 		<th>Version</th>
@@ -92,6 +93,7 @@ To access the python folder, navigate to:
 		<td>Legacy</td>
 		<td>/home/username/Documents/Allegorithmic/Substance Painter</td>
 	</tr>
+	</tbody>
 </table>
 
 | Test | Test2 |
