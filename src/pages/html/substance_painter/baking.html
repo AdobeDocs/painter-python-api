@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>baking module &mdash; Substance 3D Painter Python API 0.2.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29c81e07"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="display module" href="display.html" />
+    <link rel="prev" title="async_utils module" href="async_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #f7f7f7" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Substance 3D Painter Python API
+              <img src="../_static/pt_appicon_256.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.2.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html">Writing plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/substance_painter_plugins.html">substance_painter_plugins module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.path"><code class="docutils literal notranslate"><span class="pre">path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.plugins"><code class="docutils literal notranslate"><span class="pre">plugins</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.start_plugin"><code class="docutils literal notranslate"><span class="pre">start_plugin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.close_plugin"><code class="docutils literal notranslate"><span class="pre">close_plugin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.is_plugin_started"><code class="docutils literal notranslate"><span class="pre">is_plugin_started()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.reload_plugin"><code class="docutils literal notranslate"><span class="pre">reload_plugin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.startup_module_names"><code class="docutils literal notranslate"><span class="pre">startup_module_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.plugin_module_names"><code class="docutils literal notranslate"><span class="pre">plugin_module_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.load_startup_modules"><code class="docutils literal notranslate"><span class="pre">load_startup_modules()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.close_all_plugins"><code class="docutils literal notranslate"><span class="pre">close_all_plugins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/substance_painter_plugins.html#substance_painter_plugins.update_sys_path"><code class="docutils literal notranslate"><span class="pre">update_sys_path()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/index.html#examples-of-plugins">Examples of plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/hello_plugin.html">Hello Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugins/versioning_plugin.html">Versioning Plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">substance_painter package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="application.html">application module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="application.html#substance_painter.application.version_info"><code class="docutils literal notranslate"><span class="pre">version_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#substance_painter.application.version"><code class="docutils literal notranslate"><span class="pre">version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#substance_painter.application.engine_computations_status"><code class="docutils literal notranslate"><span class="pre">engine_computations_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#substance_painter.application.enable_engine_computations"><code class="docutils literal notranslate"><span class="pre">enable_engine_computations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#substance_painter.application.disable_engine_computations"><code class="docutils literal notranslate"><span class="pre">disable_engine_computations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#substance_painter.application.close"><code class="docutils literal notranslate"><span class="pre">close()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="async_utils.html">async_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource"><code class="docutils literal notranslate"><span class="pre">StopSource</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource.request_stop"><code class="docutils literal notranslate"><span class="pre">StopSource.request_stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource.stop_requested"><code class="docutils literal notranslate"><span class="pre">StopSource.stop_requested()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">baking module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.BakingStatus"><code class="docutils literal notranslate"><span class="pre">BakingStatus</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.CurvatureMethod"><code class="docutils literal notranslate"><span class="pre">CurvatureMethod</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.BakingParameters"><code class="docutils literal notranslate"><span class="pre">BakingParameters</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.from_texture_set"><code class="docutils literal notranslate"><span class="pre">BakingParameters.from_texture_set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.from_texture_set_name"><code class="docutils literal notranslate"><span class="pre">BakingParameters.from_texture_set_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.texture_set"><code class="docutils literal notranslate"><span class="pre">BakingParameters.texture_set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.common"><code class="docutils literal notranslate"><span class="pre">BakingParameters.common()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.baker"><code class="docutils literal notranslate"><span class="pre">BakingParameters.baker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.get_curvature_method"><code class="docutils literal notranslate"><span class="pre">BakingParameters.get_curvature_method()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set_curvature_method"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_curvature_method()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.is_baker_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.is_baker_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set_baker_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_baker_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.get_enabled_bakers"><code class="docutils literal notranslate"><span class="pre">BakingParameters.get_enabled_bakers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set_enabled_bakers"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_enabled_bakers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.is_textureset_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.is_textureset_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set_textureset_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_textureset_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.is_uv_tile_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.is_uv_tile_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set_uv_tile_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_uv_tile_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.get_enabled_uv_tiles"><code class="docutils literal notranslate"><span class="pre">BakingParameters.get_enabled_uv_tiles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substance_painter.baking.BakingParameters.set_enabled_uv_tiles"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_enabled_uv_tiles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.set_linked_group"><code class="docutils literal notranslate"><span class="pre">set_linked_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.set_linked_group_common_parameters"><code class="docutils literal notranslate"><span class="pre">set_linked_group_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.unlink_all"><code class="docutils literal notranslate"><span class="pre">unlink_all()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.unlink_all_common_parameters"><code class="docutils literal notranslate"><span class="pre">unlink_all_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.get_link_group"><code class="docutils literal notranslate"><span class="pre">get_link_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.get_link_group_common_parameters"><code class="docutils literal notranslate"><span class="pre">get_link_group_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.get_linked_texture_sets"><code class="docutils literal notranslate"><span class="pre">get_linked_texture_sets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.get_linked_texture_sets_common_parameters"><code class="docutils literal notranslate"><span class="pre">get_linked_texture_sets_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.bake_async"><code class="docutils literal notranslate"><span class="pre">bake_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substance_painter.baking.bake_selected_textures_async"><code class="docutils literal notranslate"><span class="pre">bake_selected_textures_async()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="display.html">display module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.ToneMappingFunction"><code class="docutils literal notranslate"><span class="pre">ToneMappingFunction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.get_environment_resource"><code class="docutils literal notranslate"><span class="pre">get_environment_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.set_environment_resource"><code class="docutils literal notranslate"><span class="pre">set_environment_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.get_color_lut_resource"><code class="docutils literal notranslate"><span class="pre">get_color_lut_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.set_color_lut_resource"><code class="docutils literal notranslate"><span class="pre">set_color_lut_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.get_tone_mapping"><code class="docutils literal notranslate"><span class="pre">get_tone_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.set_tone_mapping"><code class="docutils literal notranslate"><span class="pre">set_tone_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.CameraProjectionType"><code class="docutils literal notranslate"><span class="pre">CameraProjectionType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#substance_painter.display.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.get_default_camera"><code class="docutils literal notranslate"><span class="pre">Camera.get_default_camera()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.position"><code class="docutils literal notranslate"><span class="pre">Camera.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.rotation"><code class="docutils literal notranslate"><span class="pre">Camera.rotation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.field_of_view"><code class="docutils literal notranslate"><span class="pre">Camera.field_of_view</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.focal_length"><code class="docutils literal notranslate"><span class="pre">Camera.focal_length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.focus_distance"><code class="docutils literal notranslate"><span class="pre">Camera.focus_distance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.aperture"><code class="docutils literal notranslate"><span class="pre">Camera.aperture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.orthographic_height"><code class="docutils literal notranslate"><span class="pre">Camera.orthographic_height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="display.html#substance_painter.display.Camera.projection_type"><code class="docutils literal notranslate"><span class="pre">Camera.projection_type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="event.html">event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="event.html#substance_painter.event.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#event-dispatcher">Event dispatcher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.DISPATCHER"><code class="docutils literal notranslate"><span class="pre">DISPATCHER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.Dispatcher"><code class="docutils literal notranslate"><span class="pre">Dispatcher</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#export-events">Export events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ExportTexturesAboutToStart"><code class="docutils literal notranslate"><span class="pre">ExportTexturesAboutToStart</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ExportTexturesEnded"><code class="docutils literal notranslate"><span class="pre">ExportTexturesEnded</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#project-events">Project events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectOpened"><code class="docutils literal notranslate"><span class="pre">ProjectOpened</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectCreated"><code class="docutils literal notranslate"><span class="pre">ProjectCreated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectAboutToClose"><code class="docutils literal notranslate"><span class="pre">ProjectAboutToClose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectAboutToSave"><code class="docutils literal notranslate"><span class="pre">ProjectAboutToSave</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectSaved"><code class="docutils literal notranslate"><span class="pre">ProjectSaved</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectEditionEntered"><code class="docutils literal notranslate"><span class="pre">ProjectEditionEntered</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ProjectEditionLeft"><code class="docutils literal notranslate"><span class="pre">ProjectEditionLeft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.BusyStatusChanged"><code class="docutils literal notranslate"><span class="pre">BusyStatusChanged</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.TextureStateEvent"><code class="docutils literal notranslate"><span class="pre">TextureStateEvent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.TextureStateEventAction"><code class="docutils literal notranslate"><span class="pre">TextureStateEventAction</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#shelf-events">Shelf events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ShelfCrawlingStarted"><code class="docutils literal notranslate"><span class="pre">ShelfCrawlingStarted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.ShelfCrawlingEnded"><code class="docutils literal notranslate"><span class="pre">ShelfCrawlingEnded</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#baking-events">Baking events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.BakingProcessAboutToStart"><code class="docutils literal notranslate"><span class="pre">BakingProcessAboutToStart</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.BakingProcessProgress"><code class="docutils literal notranslate"><span class="pre">BakingProcessProgress</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.BakingProcessEnded"><code class="docutils literal notranslate"><span class="pre">BakingProcessEnded</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#layer-stack-events">Layer stack events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.LayerStacksModelDataChanged"><code class="docutils literal notranslate"><span class="pre">LayerStacksModelDataChanged</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#application-wide-events">Application wide events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.EngineComputationsStatusChanged"><code class="docutils literal notranslate"><span class="pre">EngineComputationsStatusChanged</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="event.html#display-events">Display events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="event.html#substance_painter.event.CameraPropertiesChanged"><code class="docutils literal notranslate"><span class="pre">CameraPropertiesChanged</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception.html">exception module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError"><code class="docutils literal notranslate"><span class="pre">ProjectError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exception.html#substance_painter.exception.ResourceNotFoundError"><code class="docutils literal notranslate"><span class="pre">ResourceNotFoundError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError"><code class="docutils literal notranslate"><span class="pre">ServiceNotFoundError</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">export module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="export.html#substance_painter.export.ExportStatus"><code class="docutils literal notranslate"><span class="pre">ExportStatus</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="export.html#export-textures">Export Textures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.list_project_textures"><code class="docutils literal notranslate"><span class="pre">list_project_textures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.TextureExportResult"><code class="docutils literal notranslate"><span class="pre">TextureExportResult</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.export_project_textures"><code class="docutils literal notranslate"><span class="pre">export_project_textures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.get_default_export_path"><code class="docutils literal notranslate"><span class="pre">get_default_export_path()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="export.html#full-json-config-dict-possibilities">Full json_config dict possibilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export.html#export-mesh">Export Mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.scene_is_triangulated"><code class="docutils literal notranslate"><span class="pre">scene_is_triangulated()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.scene_has_tessellation"><code class="docutils literal notranslate"><span class="pre">scene_has_tessellation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.MeshExportOption"><code class="docutils literal notranslate"><span class="pre">MeshExportOption</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.MeshExportResult"><code class="docutils literal notranslate"><span class="pre">MeshExportResult</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="export.html#substance_painter.export.export_mesh"><code class="docutils literal notranslate"><span class="pre">export_mesh()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="js.html">js module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="js.html#substance_painter.js.evaluate"><code class="docutils literal notranslate"><span class="pre">evaluate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">logging module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logging.html#substance_painter.logging.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html#substance_painter.logging.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html#substance_painter.logging.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html#substance_painter.logging.warning"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">project module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.BoundingBox"><code class="docutils literal notranslate"><span class="pre">BoundingBox</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.BoundingBox.dimensions"><code class="docutils literal notranslate"><span class="pre">BoundingBox.dimensions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.BoundingBox.center"><code class="docutils literal notranslate"><span class="pre">BoundingBox.center</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.BoundingBox.radius"><code class="docutils literal notranslate"><span class="pre">BoundingBox.radius</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.execute_when_not_busy"><code class="docutils literal notranslate"><span class="pre">execute_when_not_busy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.file_path"><code class="docutils literal notranslate"><span class="pre">file_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.get_scene_bounding_box"><code class="docutils literal notranslate"><span class="pre">get_scene_bounding_box()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.get_uuid"><code class="docutils literal notranslate"><span class="pre">get_uuid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.is_busy"><code class="docutils literal notranslate"><span class="pre">is_busy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.is_in_edition_state"><code class="docutils literal notranslate"><span class="pre">is_in_edition_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.last_saved_substance_painter_version"><code class="docutils literal notranslate"><span class="pre">last_saved_substance_painter_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#substance_painter.project.name"><code class="docutils literal notranslate"><span class="pre">name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#creating-a-project">Creating a project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.create"><code class="docutils literal notranslate"><span class="pre">create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.UsdSettings"><code class="docutils literal notranslate"><span class="pre">UsdSettings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.NormalMapFormat"><code class="docutils literal notranslate"><span class="pre">NormalMapFormat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.TangentSpace"><code class="docutils literal notranslate"><span class="pre">TangentSpace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.ProjectWorkflow"><code class="docutils literal notranslate"><span class="pre">ProjectWorkflow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#opening-and-closing-a-project">Opening and closing a project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.is_open"><code class="docutils literal notranslate"><span class="pre">is_open()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.open"><code class="docutils literal notranslate"><span class="pre">open()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.close"><code class="docutils literal notranslate"><span class="pre">close()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#saving-a-project">Saving a project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.needs_saving"><code class="docutils literal notranslate"><span class="pre">needs_saving()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.save"><code class="docutils literal notranslate"><span class="pre">save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.save_as"><code class="docutils literal notranslate"><span class="pre">save_as()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.save_as_copy"><code class="docutils literal notranslate"><span class="pre">save_as_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.save_as_template"><code class="docutils literal notranslate"><span class="pre">save_as_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.ProjectSaveMode"><code class="docutils literal notranslate"><span class="pre">ProjectSaveMode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#reloading-a-mesh">Reloading a mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.reload_mesh"><code class="docutils literal notranslate"><span class="pre">reload_mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.last_imported_mesh_path"><code class="docutils literal notranslate"><span class="pre">last_imported_mesh_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.MeshReloadingSettings"><code class="docutils literal notranslate"><span class="pre">MeshReloadingSettings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.ReloadMeshStatus"><code class="docutils literal notranslate"><span class="pre">ReloadMeshStatus</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#project-metadata">Project metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project.html#substance_painter.project.Metadata"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html">properties module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="properties.html#substance_painter.properties.Property"><code class="docutils literal notranslate"><span class="pre">Property</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.value"><code class="docutils literal notranslate"><span class="pre">Property.value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.name"><code class="docutils literal notranslate"><span class="pre">Property.name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.short_name"><code class="docutils literal notranslate"><span class="pre">Property.short_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.label"><code class="docutils literal notranslate"><span class="pre">Property.label()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.widget_type"><code class="docutils literal notranslate"><span class="pre">Property.widget_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.enum_values"><code class="docutils literal notranslate"><span class="pre">Property.enum_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.enum_value"><code class="docutils literal notranslate"><span class="pre">Property.enum_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html#substance_painter.properties.Property.properties"><code class="docutils literal notranslate"><span class="pre">Property.properties()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">resource module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resource.html#substance_painter.resource.Type"><code class="docutils literal notranslate"><span class="pre">Type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="resource.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#manipulating-resources">Manipulating resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#importing-resources">Importing resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#resources-used-by-a-project">Resources used by a project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#custom-preview">Custom preview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#resource-crawling">Resource crawling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="resource.html#resources">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID"><code class="docutils literal notranslate"><span class="pre">ResourceID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.ResourceLocation"><code class="docutils literal notranslate"><span class="pre">ResourceLocation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.StandardQuery"><code class="docutils literal notranslate"><span class="pre">StandardQuery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.Usage"><code class="docutils literal notranslate"><span class="pre">Usage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.search"><code class="docutils literal notranslate"><span class="pre">search()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.list_layer_stack_resources"><code class="docutils literal notranslate"><span class="pre">list_layer_stack_resources()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.update_layer_stack_resource"><code class="docutils literal notranslate"><span class="pre">update_layer_stack_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.import_project_resource"><code class="docutils literal notranslate"><span class="pre">import_project_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.import_session_resource"><code class="docutils literal notranslate"><span class="pre">import_session_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.show_resources_in_ui"><code class="docutils literal notranslate"><span class="pre">show_resources_in_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="resource.html#shelves">Shelves</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.Shelf"><code class="docutils literal notranslate"><span class="pre">Shelf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="resource.html#substance_painter.resource.Shelves"><code class="docutils literal notranslate"><span class="pre">Shelves</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="resource.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="textureset/index.html">textureset module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="textureset/channel.html">Channel class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="textureset/channel.html#substance_painter.textureset.Channel"><code class="docutils literal notranslate"><span class="pre">Channel</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/stack.html">Stack class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="textureset/stack.html#substance_painter.textureset.Stack"><code class="docutils literal notranslate"><span class="pre">Stack</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/uvtile.html">UVTile class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile"><code class="docutils literal notranslate"><span class="pre">UVTile</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/textureset.html">TextureSet class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet"><code class="docutils literal notranslate"><span class="pre">TextureSet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.ChannelFormat"><code class="docutils literal notranslate"><span class="pre">ChannelFormat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.ChannelType"><code class="docutils literal notranslate"><span class="pre">ChannelType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage"><code class="docutils literal notranslate"><span class="pre">MeshMapUsage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.Resolution"><code class="docutils literal notranslate"><span class="pre">Resolution</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.Resolution.width"><code class="docutils literal notranslate"><span class="pre">Resolution.width</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.Resolution.height"><code class="docutils literal notranslate"><span class="pre">Resolution.height</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.all_texture_sets"><code class="docutils literal notranslate"><span class="pre">all_texture_sets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.get_active_stack"><code class="docutils literal notranslate"><span class="pre">get_active_stack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.set_active_stack"><code class="docutils literal notranslate"><span class="pre">set_active_stack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.set_resolutions"><code class="docutils literal notranslate"><span class="pre">set_resolutions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html">ui module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.UIMode"><code class="docutils literal notranslate"><span class="pre">UIMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.ApplicationMenu"><code class="docutils literal notranslate"><span class="pre">ApplicationMenu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.show_main_window"><code class="docutils literal notranslate"><span class="pre">show_main_window()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.get_main_window"><code class="docutils literal notranslate"><span class="pre">get_main_window()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.get_layout"><code class="docutils literal notranslate"><span class="pre">get_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.get_layout_mode"><code class="docutils literal notranslate"><span class="pre">get_layout_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.set_layout"><code class="docutils literal notranslate"><span class="pre">set_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.reset_layout"><code class="docutils literal notranslate"><span class="pre">reset_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.add_dock_widget"><code class="docutils literal notranslate"><span class="pre">add_dock_widget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.add_plugins_toolbar_widget"><code class="docutils literal notranslate"><span class="pre">add_plugins_toolbar_widget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.add_menu"><code class="docutils literal notranslate"><span class="pre">add_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.add_toolbar"><code class="docutils literal notranslate"><span class="pre">add_toolbar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.add_action"><code class="docutils literal notranslate"><span class="pre">add_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.delete_ui_element"><code class="docutils literal notranslate"><span class="pre">delete_ui_element()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.get_current_mode"><code class="docutils literal notranslate"><span class="pre">get_current_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.html#substance_painter.ui.switch_to_mode"><code class="docutils literal notranslate"><span class="pre">switch_to_mode()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #f7f7f7" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Substance 3D Painter Python API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">substance_painter package</a></li>
+      <li class="breadcrumb-item active">baking module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/substance_painter/baking.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="async_utils.html" class="btn btn-neutral float-left" title="async_utils module" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display.html" class="btn btn-neutral float-right" title="display module" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-substance_painter.baking">
+<span id="baking-module"></span><h1>baking module<a class="headerlink" href="#module-substance_painter.baking" title="Link to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">baking</span></code> module allows to set baking parameters and launch baking
+of mesh maps.</p>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">substance_painter.baking</span> <span class="k">as</span> <span class="nn">baking</span>
+<span class="kn">import</span> <span class="nn">substance_painter.textureset</span> <span class="k">as</span> <span class="nn">textureset</span>
+<span class="kn">from</span> <span class="nn">substance_painter.baking</span> <span class="kn">import</span> <span class="n">BakingParameters</span><span class="p">,</span> <span class="n">MeshMapUsage</span><span class="p">,</span> <span class="n">CurvatureMethod</span>
+
+<span class="c1"># set baking parameters</span>
+<span class="n">baking_params</span> <span class="o">=</span> <span class="n">BakingParameters</span><span class="o">.</span><span class="n">from_texture_set_name</span><span class="p">(</span><span class="s2">&quot;Name for ts&quot;</span><span class="p">)</span>
+<span class="n">texture_set</span> <span class="o">=</span> <span class="n">baking_params</span><span class="o">.</span><span class="n">texture_set</span><span class="p">()</span>
+<span class="n">common_params</span> <span class="o">=</span> <span class="n">baking_params</span><span class="o">.</span><span class="n">common</span><span class="p">()</span>
+<span class="n">ao_params</span> <span class="o">=</span> <span class="n">baking_params</span><span class="o">.</span><span class="n">baker</span><span class="p">(</span><span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">)</span>
+<span class="n">BakingParameters</span><span class="o">.</span><span class="n">set</span><span class="p">({</span>
+    <span class="n">common_params</span><span class="p">[</span><span class="s1">&#39;OutputSize&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+    <span class="n">ao_params</span><span class="p">[</span><span class="s1">&#39;Distribution&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="n">ao_params</span><span class="p">[</span><span class="s1">&#39;Distribution&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">enum_value</span><span class="p">(</span><span class="s1">&#39;Cosine&#39;</span><span class="p">)})</span>
+
+<span class="c1"># check if common parameters are shared between Texture Sets (True at project creation)</span>
+<span class="n">common_params_are_shared</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">baking</span><span class="o">.</span><span class="n">get_link_group_common_parameters</span><span class="p">())</span>
+
+<span class="c1"># unlink common parameters. The common parameters for all Texture Sets become independent</span>
+<span class="n">baking</span><span class="o">.</span><span class="n">unlink_all_common_parameters</span><span class="p">()</span>
+
+<span class="c1"># recheck whether common parameters are shared between Texture Sets (now False)</span>
+<span class="n">common_params_are_linked</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">baking</span><span class="o">.</span><span class="n">get_link_group_common_parameters</span><span class="p">())</span>
+
+<span class="n">ts1</span> <span class="o">=</span> <span class="n">textureset</span><span class="o">.</span><span class="n">TextureSet</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s2">&quot;Name for ts1&quot;</span><span class="p">)</span>
+<span class="n">ts2</span> <span class="o">=</span> <span class="n">textureset</span><span class="o">.</span><span class="n">TextureSet</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s2">&quot;Name for ts2&quot;</span><span class="p">)</span>
+
+<span class="c1"># get the list of Texture Sets which are linked for AO with ts1</span>
+<span class="c1"># it&#39;s not yet linked, so returns only [ts1]</span>
+<span class="n">linked_with_ts1</span> <span class="o">=</span> <span class="n">baking</span><span class="o">.</span><span class="n">get_linked_texture_sets</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span> <span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">)</span>
+
+<span class="c1"># link AO baking parameters for ts1 and ts2 together into a group,</span>
+<span class="c1"># keeping ts1 parameters for both</span>
+<span class="n">baking</span><span class="o">.</span><span class="n">set_linked_group</span><span class="p">([</span><span class="n">ts1</span><span class="p">,</span><span class="n">ts2</span><span class="p">],</span> <span class="n">ts1</span><span class="p">,</span> <span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">)</span>
+
+<span class="c1"># get the new list of Texture Sets which are linked with ts1</span>
+<span class="c1"># now they are linked, so it returns [ts1, ts2]</span>
+<span class="n">linked_with_ts1</span> <span class="o">=</span> <span class="n">baking</span><span class="o">.</span><span class="n">get_linked_texture_sets</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span> <span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">)</span>
+
+<span class="c1"># finally unlink AO baking parameters</span>
+<span class="n">baking</span><span class="o">.</span><span class="n">unlink_all</span><span class="p">(</span><span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">)</span>
+
+<span class="c1"># get curvature method</span>
+<span class="n">curvature_method</span> <span class="o">=</span> <span class="n">baking_params</span><span class="o">.</span><span class="n">get_curvature_method</span><span class="p">()</span>
+
+<span class="c1"># set curvature method</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">set_curvature_method</span><span class="p">(</span><span class="n">CurvatureMethod</span><span class="o">.</span><span class="n">FromMesh</span><span class="p">)</span>
+
+<span class="c1"># check whether the baking is enabled on the Texture Set level and enable it</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">is_textureset_enabled</span><span class="p">()</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">set_textureset_enabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># check if AO usage is enabled for baking and enable it</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">is_baker_enabled</span><span class="p">(</span><span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">)</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">set_baker_enabled</span><span class="p">(</span><span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># get all usages enabled for baking</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">get_enabled_bakers</span><span class="p">()</span>
+
+<span class="c1"># set usages enabled for baking</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">set_enabled_bakers</span><span class="p">([</span><span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">AO</span><span class="p">,</span> <span class="n">MeshMapUsage</span><span class="o">.</span><span class="n">Normal</span><span class="p">])</span>
+
+<span class="c1"># check if one UV Tile is enabled for baking, disable it</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">is_uv_tile_enabled</span><span class="p">(</span><span class="n">texture_set</span><span class="o">.</span><span class="n">uv_tile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">set_uv_tile_enabled</span><span class="p">(</span><span class="n">texture_set</span><span class="o">.</span><span class="n">uv_tile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># get all UV Tiles enabled for baking</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">get_enabled_uv_tiles</span><span class="p">()</span>
+<span class="c1"># set UV Tiles enabled for baking</span>
+<span class="n">baking_params</span><span class="o">.</span><span class="n">set_enabled_uv_tiles</span><span class="p">([</span><span class="n">texture_set</span><span class="o">.</span><span class="n">uv_tile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">texture_set</span><span class="o">.</span><span class="n">uv_tile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a>,
+<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.MeshMapUsage</span></code></a>
+<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a></p>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">BakingStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.baking.BakingStatus" title="Link to this definition"></a></dt>
+<dd><p>Status code of the baking process.</p>
+<p>Members:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Success</span></code></p></td>
+<td><p>The baking was successful.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Cancel</span></code></p></td>
+<td><p>The baking was cancelled by the user.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Fail</span></code></p></td>
+<td><p>The baking could not complete; the cause is detailed in the log.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="substance_painter.baking.CurvatureMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">CurvatureMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.baking.CurvatureMethod" title="Link to this definition"></a></dt>
+<dd><p>Members:</p>
+<p><code class="docutils literal notranslate"><span class="pre">FromMesh</span></code>, <code class="docutils literal notranslate"><span class="pre">FromNormalMap</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">BakingParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.baking.BakingParameters" title="Link to this definition"></a></dt>
+<dd><p>Baking parameters for a given texture set.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a>,
+<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.MeshMapUsage</span></code></a></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.from_texture_set">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_texture_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texture_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.baking.BakingParameters" title="substance_painter.baking.BakingParameters"><span class="pre">BakingParameters</span></a></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.from_texture_set" title="Link to this definition"></a></dt>
+<dd><p>Get the baking parameters for the given texture set object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texture_set</strong> (<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a>) – The texture set.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The baking parameters for the given texure set.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.baking.BakingParameters" title="substance_painter.baking.BakingParameters">BakingParameters</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.from_texture_set_name">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_texture_set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texture_set_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.baking.BakingParameters" title="substance_painter.baking.BakingParameters"><span class="pre">BakingParameters</span></a></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.from_texture_set_name" title="Link to this definition"></a></dt>
+<dd><p>Get the baking parameters for the given texture set name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texture_set_name</strong> (<em>str</em>) – The texture set name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The baking parameters for the given texure set.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.baking.BakingParameters" title="substance_painter.baking.BakingParameters">BakingParameters</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.properties.Property</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.texture_set">
+<span class="sig-name descname"><span class="pre">texture_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.texture_set" title="Link to this definition"></a></dt>
+<dd><p>Get the associated texture set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The texture set associated with this BakingParameters instance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet">TextureSet</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.common">
+<span class="sig-name descname"><span class="pre">common</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><span class="pre">Property</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.common" title="Link to this definition"></a></dt>
+<dd><p>Get the parameters common to all bakers, like baking resolution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The common parameters.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[str, <a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property">Property</a>]</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.properties.Property</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.baker">
+<span class="sig-name descname"><span class="pre">baker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baked_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><span class="pre">Property</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.baker" title="Link to this definition"></a></dt>
+<dd><p>Get the parameters specific to a given baked map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>baked_map</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – The baked map usage.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding baked map parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[str, <a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property">Property</a>]</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.MeshMapUsage</span></code></a>,
+<a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.properties.Property</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">property_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><span class="pre">Property</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set" title="Link to this definition"></a></dt>
+<dd><p>Set property values in batch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>property_values</strong> (<em>Dict</em><em>[</em><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><em>Property</em></a><em>, </em><em>PropertyValue</em><em>]</em>) – A dict of properties</p></li>
+<li><p><strong>values.</strong> (<em>to be set with their corresponding new</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="properties.html#substance_painter.properties.Property" title="substance_painter.properties.Property"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.properties.Property</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.get_curvature_method">
+<span class="sig-name descname"><span class="pre">get_curvature_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.baking.CurvatureMethod" title="substance_painter.baking.CurvatureMethod"><span class="pre">CurvatureMethod</span></a></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.get_curvature_method" title="Link to this definition"></a></dt>
+<dd><p>Get the curvature method used for baking</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The curvature method used for baking</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#substance_painter.baking.CurvatureMethod" title="substance_painter.baking.CurvatureMethod">CurvatureMethod</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><cite>set_curvature_method</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set_curvature_method">
+<span class="sig-name descname"><span class="pre">set_curvature_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.baking.CurvatureMethod" title="substance_painter.baking.CurvatureMethod"><span class="pre">CurvatureMethod</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set_curvature_method" title="Link to this definition"></a></dt>
+<dd><p>Set the curvature method to use for baking</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> (<a class="reference internal" href="#substance_painter.baking.CurvatureMethod" title="substance_painter.baking.CurvatureMethod"><em>CurvatureMethod</em></a>) – The new method to use for baking</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><cite>get_curvature_method</cite></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.is_baker_enabled">
+<span class="sig-name descname"><span class="pre">is_baker_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.is_baker_enabled" title="Link to this definition"></a></dt>
+<dd><p>Whether some usage is enabled for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>usage</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – The baked map usage.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the corresponding usage is enabled for baking.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set_baker_enabled">
+<span class="sig-name descname"><span class="pre">set_baker_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set_baker_enabled" title="Link to this definition"></a></dt>
+<dd><p>Enable or disable a usage for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>usage</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – The baked map usage.</p></li>
+<li><p><strong>enable</strong> (<em>bool</em>) – Enable or disable.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.get_enabled_bakers">
+<span class="sig-name descname"><span class="pre">get_enabled_bakers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.get_enabled_bakers" title="Link to this definition"></a></dt>
+<dd><p>Get all usages enabled for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enabled usages.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage">MeshMapUsage</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set_enabled_bakers">
+<span class="sig-name descname"><span class="pre">set_enabled_bakers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled_usages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set_enabled_bakers" title="Link to this definition"></a></dt>
+<dd><p>Set usages enabled for baking. Usages not in this list will be disabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enabled_usages</strong> (<em>List</em><em>[</em><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a><em>]</em>) – Enabled usages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.is_textureset_enabled">
+<span class="sig-name descname"><span class="pre">is_textureset_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.is_textureset_enabled" title="Link to this definition"></a></dt>
+<dd><p>Whether this Texture Set is enabled for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if this Texture Set is enabled for baking.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set_textureset_enabled">
+<span class="sig-name descname"><span class="pre">set_textureset_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set_textureset_enabled" title="Link to this definition"></a></dt>
+<dd><p>Enable or disable this Texture Set for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> (<em>bool</em>) – Enable or disable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.is_uv_tile_enabled">
+<span class="sig-name descname"><span class="pre">is_uv_tile_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uv_tile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><span class="pre">UVTile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.is_uv_tile_enabled" title="Link to this definition"></a></dt>
+<dd><p>Whether a UV Tile is enabled for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tile</strong> (<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><em>UVTile</em></a>) – The UV Tile.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the UV Tile is enabled for baking.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a>,
+<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set_uv_tile_enabled">
+<span class="sig-name descname"><span class="pre">set_uv_tile_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uv_tile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><span class="pre">UVTile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set_uv_tile_enabled" title="Link to this definition"></a></dt>
+<dd><p>Enable or disable an UV Tile for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uv_tile</strong> (<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><em>UVTile</em></a>) – The UV Tile.</p></li>
+<li><p><strong>enable</strong> (<em>bool</em>) – Enable or disable.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a>,
+<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.get_enabled_uv_tiles">
+<span class="sig-name descname"><span class="pre">get_enabled_uv_tiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><span class="pre">UVTile</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.get_enabled_uv_tiles" title="Link to this definition"></a></dt>
+<dd><p>Get all UV Tiles enabled for baking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enabled UV Tiles.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile">UVTile</a>]</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a>,
+<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="substance_painter.baking.BakingParameters.set_enabled_uv_tiles">
+<span class="sig-name descname"><span class="pre">set_enabled_uv_tiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled_uv_tiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><span class="pre">UVTile</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.BakingParameters.set_enabled_uv_tiles" title="Link to this definition"></a></dt>
+<dd><p>Set UV Tiles enabled for baking. All other tiles will be disabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enabled_uv_tiles</strong> (<em>List</em><em>[</em><a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><em>UVTile</em></a><em>]</em>) – Enabled UV Tiles.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet</span></code></a>,
+<a class="reference internal" href="textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.set_linked_group">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">set_linked_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.set_linked_group" title="Link to this definition"></a></dt>
+<dd><p>Make a group of Texture Sets share the same baking parameters for the given ‘usage’. After that,
+editing the ‘usage’ parameters of one of the group’s Texture Set will impact the whole group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> (<em>List</em><em>[</em><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a><em>]</em>) – Texture Sets to be included in the new group.</p></li>
+<li><p><strong>reference</strong> (<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a>) – Texture Set which parameters are applied to the whole group.</p></li>
+<li><p><strong>usage</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – Usage of the group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.set_linked_group_common_parameters">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">set_linked_group_common_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.set_linked_group_common_parameters" title="Link to this definition"></a></dt>
+<dd><p>Make a group of Texture Sets share the same baking common parameters. After that, editing a
+common parameter of one of the group’s Texture Set will impact the whole group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> (<em>List</em><em>[</em><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a><em>]</em>) – Texture Sets to be included in the new group.</p></li>
+<li><p><strong>reference</strong> (<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a>) – Texture Set which parameters are applied to the whole group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.unlink_all">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">unlink_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.unlink_all" title="Link to this definition"></a></dt>
+<dd><p>Unlink all Texture Sets for a given usage. That is, remove the group if it exists, so that all
+Texture Sets have their own copy of the parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>usage</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – Usage to unlink.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.unlink_all_common_parameters">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">unlink_all_common_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.baking.unlink_all_common_parameters" title="Link to this definition"></a></dt>
+<dd><p>Unlink all Texture Sets for common parameters. That is, remove the group if exists, so that all
+Texture Sets have their own copy of the parameters.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.get_link_group">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">get_link_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.get_link_group" title="Link to this definition"></a></dt>
+<dd><p>Get the list of Texture Sets that share baking parameters for a given usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>usage</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – Usage to query.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>All linked Texture Sets for the usage. Empty list if no Texture Set are
+linked.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet">TextureSet</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.get_link_group_common_parameters">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">get_link_group_common_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.get_link_group_common_parameters" title="Link to this definition"></a></dt>
+<dd><p>Get the list of Texture Sets that share common baking parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>All linked Texture Sets for common parameters. Empty list if no Texture
+Set are linked.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet">TextureSet</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.get_linked_texture_sets">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">get_linked_texture_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texture_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><span class="pre">MeshMapUsage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.get_linked_texture_sets" title="Link to this definition"></a></dt>
+<dd><p>Get the list of Texture Sets that share the same parameters as some Texture Set, for a given
+usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texture_set</strong> (<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a>) – The Texture Set to query</p></li>
+<li><p><strong>usage</strong> (<a class="reference internal" href="textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><em>MeshMapUsage</em></a>) – The usage to query</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of Texture Sets sharing parameters with the input Texture Set.
+Contains at least the input Texture Set if no group exists for the usage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet">TextureSet</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.get_linked_texture_sets_common_parameters">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">get_linked_texture_sets_common_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texture_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.baking.get_linked_texture_sets_common_parameters" title="Link to this definition"></a></dt>
+<dd><p>Get the list of Texture Sets that share the same parameters as some Texture Set, for common
+parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texture_set</strong> (<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a>) – The Texture Set to query</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of Texture Sets sharing common parameters with the input Texture
+Set. Contains at least the input Texture Set if no group exists for common parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet">TextureSet</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.bake_async">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">bake_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texture_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><span class="pre">TextureSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource"><span class="pre">StopSource</span></a></span></span><a class="headerlink" href="#substance_painter.baking.bake_async" title="Link to this definition"></a></dt>
+<dd><p>Launch the baking process for a Texture Set, using the current baking configuration.
+The configuration is set by setting baking parameters, enabling Texture Set, selecting UV Tiles
+for baking, setting curvature method etc.
+This function is asynchronous. When the baking process is finished, the
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessEnded" title="substance_painter.event.BakingProcessEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessEnded</span></code></a> event is sent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texture_set</strong> (<a class="reference internal" href="textureset/textureset.html#substance_painter.textureset.TextureSet" title="substance_painter.textureset.TextureSet"><em>TextureSet</em></a>) – The Texture Set to bake.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Can be used to cancel the asynchronous computation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource">StopSource</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#substance_painter.baking.BakingParameters" title="substance_painter.baking.BakingParameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">BakingParameters</span></code></a>
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessAboutToStart" title="substance_painter.event.BakingProcessAboutToStart"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessAboutToStart</span></code></a>
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessProgress" title="substance_painter.event.BakingProcessProgress"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessProgress</span></code></a>
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessEnded" title="substance_painter.event.BakingProcessEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessEnded</span></code></a>
+<a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.async_utils.StopSource</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="substance_painter.baking.bake_selected_textures_async">
+<span class="sig-prename descclassname"><span class="pre">substance_painter.baking.</span></span><span class="sig-name descname"><span class="pre">bake_selected_textures_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource"><span class="pre">StopSource</span></a></span></span><a class="headerlink" href="#substance_painter.baking.bake_selected_textures_async" title="Link to this definition"></a></dt>
+<dd><p>Launch the baking process, using the current baking configuration.
+The configuration is set by setting baking parameters, enabling Texture Set, selecting UV Tiles
+for baking, setting curvature method etc.
+This function is asynchronous. When the baking process is finished, the
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessEnded" title="substance_painter.event.BakingProcessEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessEnded</span></code></a> event is sent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be used to cancel the asynchronous computation.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource">StopSource</a></p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#substance_painter.baking.BakingParameters" title="substance_painter.baking.BakingParameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">BakingParameters</span></code></a>
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessAboutToStart" title="substance_painter.event.BakingProcessAboutToStart"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessAboutToStart</span></code></a>
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessProgress" title="substance_painter.event.BakingProcessProgress"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessProgress</span></code></a>
+<a class="reference internal" href="event.html#substance_painter.event.BakingProcessEnded" title="substance_painter.event.BakingProcessEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessEnded</span></code></a>
+<a class="reference internal" href="async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.async_utils.StopSource</span></code></a></p>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="async_utils.html" class="btn btn-neutral float-left" title="async_utils module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display.html" class="btn btn-neutral float-right" title="display module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Adobe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
