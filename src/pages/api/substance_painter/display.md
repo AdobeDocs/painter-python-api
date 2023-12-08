@@ -13,25 +13,28 @@ keywords:
 
 
 
-<div class="wy-grid-for-nav">
 
 
-<div class="wy-nav-content">
-<div class="rst-content style-external-links">
 
-<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
-<div itemprop="articleBody">
 
-<span id="display-module"></span><h1>display module<a class="headerlink" href="#module-substance_painter.display" title="Link to this heading"> </a></h1>
-<p>This module exposes functions that change how the model of a project is presented
+
+
+
+
+
+<h1>display module<a class="headerlink" href="#module-substance_painter.display" title="Link to this heading"> </a></h1>
+<p class>This module exposes functions that change how the model of a project is presented
 in the viewports. They correspond to settings available in the “Display
 Settings” window.</p>
-<p>The Environment Map used to light the scene can be retrieved with
-<a class="reference internal" href="#substance_painter.display.get_environment_resource" title="substance_painter.display.get_environment_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_environment_resource()</span></code></a>, or set with <a class="reference internal" href="#substance_painter.display.set_environment_resource" title="substance_painter.display.set_environment_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_environment_resource()</span></code></a>.
+<p class>The Environment Map used to light the scene can be retrieved with
+<a class="reference internal" href="#substance_painter.display.get_environment_resource" title="substance_painter.display.get_environment_resource"><code class="xref py py-func docutils literal notranslate">get_environment_resource()</code></a>, or set with <a class="reference internal" href="#substance_painter.display.set_environment_resource" title="substance_painter.display.set_environment_resource"><code class="xref py py-func docutils literal notranslate">set_environment_resource()</code></a>.
 The look up table (LUT) used as a Color Profile can be retrieved with
-<a class="reference internal" href="#substance_painter.display.get_color_lut_resource" title="substance_painter.display.get_color_lut_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_color_lut_resource()</span></code></a>, or set with <a class="reference internal" href="#substance_painter.display.set_color_lut_resource" title="substance_painter.display.set_color_lut_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_color_lut_resource()</span></code></a>.</p>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre>import substance_painter.display
+<a class="reference internal" href="#substance_painter.display.get_color_lut_resource" title="substance_painter.display.get_color_lut_resource"><code class="xref py py-func docutils literal notranslate">get_color_lut_resource()</code></a>, or set with <a class="reference internal" href="#substance_painter.display.set_color_lut_resource" title="substance_painter.display.set_color_lut_resource"><code class="xref py py-func docutils literal notranslate">set_color_lut_resource()</code></a>.</p>
+<p class>Example</p>
+
+
+```python
+import substance_painter.display
 
 # Show the currently used color profile:
 color_lut = substance_painter.display.get_color_lut_resource()
@@ -69,35 +72,37 @@ try:
 	substance_painter.display.set_tone_mapping(new_tone_mapping)
 except RuntimeError:
 	print("The project is color managed; tone mapping is not available")
-</pre></div>
-</div>
+```
+
+
+
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a>,
+<p class>See also</p>
+<p class><a class="reference internal" href="resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate">substance_painter.resource</code></a>,
 <a class="reference external" href="https://www.adobe.com/go/painter-color-profile">Color Profile documentation</a>,
 <a class="reference external" href="https://www.adobe.com/go/painter-environment-settings">Environment Settings documentation</a>,
 <a class="reference external" href="https://substance3d.adobe.com/documentation/spdoc/camera-settings-172818743.html">Camera Settings documentation</a>.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="substance_painter.display.ToneMappingFunction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">ToneMappingFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.display.ToneMappingFunction" title="Link to this definition"> </a></dt>
-<dd><p>Tone mapping function used in display.</p>
-<p>This corresponds to the “Tone mapping” list in the “Camera settings” section
+<em class="property">class </em>substance_painter.display.ToneMappingFunction(<em class="sig-param">value</em>)<a class="headerlink" href="#substance_painter.display.ToneMappingFunction" title="Link to this definition"> </a></dt>
+<dd><p class>Tone mapping function used in display.</p>
+<p class>This corresponds to the “Tone mapping” list in the “Camera settings” section
 of the “Display settings” view.</p>
-<p>Members:</p>
+<p class>Members:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p class>Name</p></th>
+<th class="head"><p class>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Linear</span></code></p></td>
-<td><p>Transformation from linear to sRGB without any color remapping.
+<tr class="row-even"><td><p class><code class="docutils literal notranslate">Linear</code></p></td>
+<td><p class>Transformation from linear to sRGB without any color remapping.
 Color values above 1 are clamped.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ACES</span></code></p></td>
-<td><p>Use the standard color remapping from the Academy Color Encoding
+<tr class="row-odd"><td><p class><code class="docutils literal notranslate">ACES</code></p></td>
+<td><p class>Use the standard color remapping from the Academy Color Encoding
 System (ACES).</p></td>
 </tr>
 </tbody>
@@ -105,19 +110,19 @@ System (ACES).</p></td>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.display.get_environment_resource">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">get_environment_resource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><span class="pre">ResourceID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.display.get_environment_resource" title="Link to this definition"> </a></dt>
-<dd><p>Get the environment map resource of the active project.</p>
+substance_painter.display.get_environment_resource() → <a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a> | None<a class="headerlink" href="#substance_painter.display.get_environment_resource" title="Link to this definition"> </a></dt>
+<dd><p class>Get the environment map resource of the active project.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The environment map resource or None.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class>The environment map resource or None.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a></p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a></p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dt class="field-odd">Raises:</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
     services yet.</p></li>
 </ul>
 </dd>
@@ -125,18 +130,18 @@ System (ACES).</p></td>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.display.set_environment_resource">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">set_environment_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_env_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><span class="pre">ResourceID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.display.set_environment_resource" title="Link to this definition"> </a></dt>
-<dd><p>Set the environment map resource of the active project.</p>
+substance_painter.display.set_environment_resource(<em class="sig-param">new_env_map: <a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a></em>) → None<a class="headerlink" href="#substance_painter.display.set_environment_resource" title="Link to this definition"> </a></dt>
+<dd><p class>Set the environment map resource of the active project.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>new_env_map</strong> (<a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><em>ResourceID</em></a>) – The new environment map resource.</p>
+<dt class="field-odd">Parameters:</dt>
+<dd class="field-odd"><p class><strong>new_env_map</strong> (<a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><em>ResourceID</em></a>) – The new environment map resource.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises:</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">new_env_map</span></code> is not a ResourceID.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ResourceNotFoundError" title="substance_painter.exception.ResourceNotFoundError"><strong>ResourceNotFoundError</strong></a> – If the environment map <code class="docutils literal notranslate"><span class="pre">new_env_map</span></code> is not found.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><strong>TypeError</strong> – If <code class="docutils literal notranslate">new_env_map</code> is not a ResourceID.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ResourceNotFoundError" title="substance_painter.exception.ResourceNotFoundError"><strong>ResourceNotFoundError</strong></a> – If the environment map <code class="docutils literal notranslate">new_env_map</code> is not found.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
     services yet.</p></li>
 </ul>
 </dd>
@@ -144,19 +149,19 @@ System (ACES).</p></td>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.display.get_color_lut_resource">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">get_color_lut_resource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><span class="pre">ResourceID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.display.get_color_lut_resource" title="Link to this definition"> </a></dt>
-<dd><p>Get the color profile LUT resource of the active project.</p>
+substance_painter.display.get_color_lut_resource() → <a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a> | None<a class="headerlink" href="#substance_painter.display.get_color_lut_resource" title="Link to this definition"> </a></dt>
+<dd><p class>Get the color profile LUT resource of the active project.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The color profile LUT resource or None.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class>The color profile LUT resource or None.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a></p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a></p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dt class="field-odd">Raises:</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
     services yet.</p></li>
 </ul>
 </dd>
@@ -164,18 +169,18 @@ System (ACES).</p></td>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.display.set_color_lut_resource">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">set_color_lut_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_color_lut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><span class="pre">ResourceID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.display.set_color_lut_resource" title="Link to this definition"> </a></dt>
-<dd><p>Set the color profile LUT resource of the active project.</p>
+substance_painter.display.set_color_lut_resource(<em class="sig-param">new_color_lut: <a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID">ResourceID</a></em>) → None<a class="headerlink" href="#substance_painter.display.set_color_lut_resource" title="Link to this definition"> </a></dt>
+<dd><p class>Set the color profile LUT resource of the active project.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>new_color_lut</strong> (<a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><em>ResourceID</em></a>) – The new color profile LUT.</p>
+<dt class="field-odd">Parameters:</dt>
+<dd class="field-odd"><p class><strong>new_color_lut</strong> (<a class="reference internal" href="resource.html#substance_painter.resource.ResourceID" title="substance_painter.resource.ResourceID"><em>ResourceID</em></a>) – The new color profile LUT.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises:</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">new_color_lut</span></code> is not a ResourceID.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ResourceNotFoundError" title="substance_painter.exception.ResourceNotFoundError"><strong>ResourceNotFoundError</strong></a> – If the color profile <code class="docutils literal notranslate"><span class="pre">new_color_lut</span></code> is not found.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><strong>TypeError</strong> – If <code class="docutils literal notranslate">new_color_lut</code> is not a ResourceID.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ResourceNotFoundError" title="substance_painter.exception.ResourceNotFoundError"><strong>ResourceNotFoundError</strong></a> – If the color profile <code class="docutils literal notranslate">new_color_lut</code> is not found.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
     services yet.</p></li>
 </ul>
 </dd>
@@ -183,29 +188,29 @@ System (ACES).</p></td>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.display.get_tone_mapping">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">get_tone_mapping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction"><span class="pre">ToneMappingFunction</span></a></span></span><a class="headerlink" href="#substance_painter.display.get_tone_mapping" title="Link to this definition"> </a></dt>
-<dd><p>Get the tone mapping operator used to display the current project.</p>
+substance_painter.display.get_tone_mapping() → <a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction">ToneMappingFunction</a><a class="headerlink" href="#substance_painter.display.get_tone_mapping" title="Link to this definition"> </a></dt>
+<dd><p class>Get the tone mapping operator used to display the current project.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The tone mapping function is disabled when color management is enabled.
+<p class>Note</p>
+<p class>The tone mapping function is disabled when color management is enabled.
 In that case trying to call get_tone_mapping will throw a RuntimeError.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><dl class="simple">
-<dt>The tone mapping function currently used by</dt><dd><p>the project.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class><dl class="simple">
+<dt>The tone mapping function currently used by</dt><dd><p class>the project.</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction">ToneMappingFunction</a></p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction">ToneMappingFunction</a></p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dt class="field-odd">Raises:</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError</strong> – If the project is color managed.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
+<li><p class><strong>RuntimeError</strong> – If the project is color managed.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
     services yet.</p></li>
 </ul>
 </dd>
@@ -213,24 +218,24 @@ In that case trying to call get_tone_mapping will throw a RuntimeError.</p>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.display.set_tone_mapping">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">set_tone_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_tone_mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction"><span class="pre">ToneMappingFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#substance_painter.display.set_tone_mapping" title="Link to this definition"> </a></dt>
-<dd><p>Set the tone mapping operator to display the current project.</p>
+substance_painter.display.set_tone_mapping(<em class="sig-param">new_tone_mapping: <a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction">ToneMappingFunction</a></em>) → None<a class="headerlink" href="#substance_painter.display.set_tone_mapping" title="Link to this definition"> </a></dt>
+<dd><p class>Set the tone mapping operator to display the current project.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The tone mapping function is disabled when color management is enabled.
+<p class>Note</p>
+<p class>The tone mapping function is disabled when color management is enabled.
 In that case trying to call set_tone_mapping will throw a RuntimeError.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>new_tone_mapping</strong> (<a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction"><em>ToneMappingFunction</em></a>) – The new tone mapping function
+<dt class="field-odd">Parameters:</dt>
+<dd class="field-odd"><p class><strong>new_tone_mapping</strong> (<a class="reference internal" href="#substance_painter.display.ToneMappingFunction" title="substance_painter.display.ToneMappingFunction"><em>ToneMappingFunction</em></a>) – The new tone mapping function
 to use in the project.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises:</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">new_tone_mapping</span></code> is not a ToneMappingFunction.</p></li>
-<li><p><strong>RuntimeError</strong> – If the project is color managed.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
+<li><p class><strong>TypeError</strong> – If <code class="docutils literal notranslate">new_tone_mapping</code> is not a ToneMappingFunction.</p></li>
+<li><p class><strong>RuntimeError</strong> – If the project is color managed.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ServiceNotFoundError" title="substance_painter.exception.ServiceNotFoundError"><strong>ServiceNotFoundError</strong></a> – If Substance 3D Painter has not started all its
     services yet.</p></li>
 </ul>
 </dd>
@@ -238,32 +243,35 @@ to use in the project.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="substance_painter.display.CameraProjectionType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">CameraProjectionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.display.CameraProjectionType" title="Link to this definition"> </a></dt>
-<dd><p>Camera projection type.</p>
-<p>Members:</p>
+<em class="property">class </em>substance_painter.display.CameraProjectionType(<em class="sig-param">value</em>)<a class="headerlink" href="#substance_painter.display.CameraProjectionType" title="Link to this definition"> </a></dt>
+<dd><p class>Camera projection type.</p>
+<p class>Members:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p class>Name</p></th>
+<th class="head"><p class>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Perspective</span></code></p></td>
-<td><p>Objects appear smaller when they are far from the camera.</p></td>
+<tr class="row-even"><td><p class><code class="docutils literal notranslate">Perspective</code></p></td>
+<td><p class>Objects appear smaller when they are far from the camera.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Orthographic</span></code></p></td>
-<td><p>Preserves relative size of objects regardless its distance from the camera.</p></td>
+<tr class="row-odd"><td><p class><code class="docutils literal notranslate">Orthographic</code></p></td>
+<td><p class>Preserves relative size of objects regardless its distance from the camera.</p></td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
-<dl class="py class">
+
 <dt class="sig sig-object py" id="substance_painter.display.Camera">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.display.</span></span><span class="sig-name descname"><span class="pre">Camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_camera_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.display.Camera" title="Link to this definition"> </a></dt>
-<dd><p>Allows the manipulation of the properties of an existing Camera.
+<em class="property">class </em>substance_painter.display.Camera(<em class="sig-param">_camera_id: int</em>)<a class="headerlink" href="#substance_painter.display.Camera" title="Link to this definition"> </a></dt>
+<p class>Allows the manipulation of the properties of an existing Camera.
 Coordinates of the camera are defined in the scene space.</p>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre>import substance_painter.display
+<p class>Example</p>
+
+
+```python
+import substance_painter.display
 import substance_painter.project
 
 substance_painter.project.open("C:/projects/MeetMat.spp")
@@ -285,209 +293,211 @@ camera.position = [
 camera.rotation = [0, 45, 0]
 # Update the camera field of view (in degrees)
 camera.field_of_view = 50
-</pre></div>
-</div>
+```
+
+
+
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference external" href="https://substance3d.adobe.com/documentation/spdoc/camera-settings-172818743.html">Camera Settings documentation</a>.
-<a class="reference internal" href="project.html#substance_painter.project.get_scene_bounding_box" title="substance_painter.project.get_scene_bounding_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.get_scene_bounding_box()</span></code></a></p>
+<p class>See also</p>
+<p class><a class="reference external" href="https://substance3d.adobe.com/documentation/spdoc/camera-settings-172818743.html">Camera Settings documentation</a>.
+<a class="reference internal" href="project.html#substance_painter.project.get_scene_bounding_box" title="substance_painter.project.get_scene_bounding_box"><code class="xref py py-func docutils literal notranslate">substance_painter.project.get_scene_bounding_box()</code></a></p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.get_default_camera">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.display.Camera" title="substance_painter.display.Camera"><span class="pre">Camera</span></a></span></span><a class="headerlink" href="#substance_painter.display.Camera.get_default_camera" title="Link to this definition"> </a></dt>
-<dd><p>Get the default camera.</p>
+<em class="property">static </em>get_default_camera() → <a class="reference internal" href="#substance_painter.display.Camera" title="substance_painter.display.Camera">Camera</a><a class="headerlink" href="#substance_painter.display.Camera.get_default_camera" title="Link to this definition"> </a></dt>
+<dd><p class>Get the default camera.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The default (main) camera.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class>The default (main) camera.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#substance_painter.display.Camera" title="substance_painter.display.Camera">Camera</a></p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="#substance_painter.display.Camera" title="substance_painter.display.Camera">Camera</a></p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dt class="field-odd">Raises:</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><strong>RuntimeError</strong> – If no camera has been found.</p></li>
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><strong>RuntimeError</strong> – If no camera has been found.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.position">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#substance_painter.display.Camera.position" title="Link to this definition"> </a></dt>
-<dd><p>The position (x,y,z) of the camera.</p>
+<em class="property">property </em>position<em class="property">: List[float]</em><a class="headerlink" href="#substance_painter.display.Camera.position" title="Link to this definition"> </a></dt>
+<dd><p class>The position (x,y,z) of the camera.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the position of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the position of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the position of the camera.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the position of the camera.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[float]</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>List[float]</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-even">Raises:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.rotation">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rotation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#substance_painter.display.Camera.rotation" title="Link to this definition"> </a></dt>
-<dd><p>The rotation (x,y,z) of the camera as Euler angles in degrees.</p>
+<em class="property">property </em>rotation<em class="property">: List[float]</em><a class="headerlink" href="#substance_painter.display.Camera.rotation" title="Link to this definition"> </a></dt>
+<dd><p class>The rotation (x,y,z) of the camera as Euler angles in degrees.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the rotation of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the rotation of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the rotation of the camera.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the rotation of the camera.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[float]</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>List[float]</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-even">Raises:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.field_of_view">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_of_view</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#substance_painter.display.Camera.field_of_view" title="Link to this definition"> </a></dt>
-<dd><p>The field of view of the camera in degrees.
-This value is only used if the <code class="docutils literal notranslate"><span class="pre">CameraProjectionType</span></code> is <code class="docutils literal notranslate"><span class="pre">Perspective</span></code>.</p>
+<em class="property">property </em>field_of_view<em class="property">: float</em><a class="headerlink" href="#substance_painter.display.Camera.field_of_view" title="Link to this definition"> </a></dt>
+<dd><p class>The field of view of the camera in degrees.
+This value is only used if the <code class="docutils literal notranslate">CameraProjectionType</code> is <code class="docutils literal notranslate">Perspective</code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the field of view of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the field of view of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the field of view of the camera. Value is clamped between 3 and 179.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the field of view of the camera. Value is clamped between 3 and 179.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>float</p>
 </dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Modifing the field of view will change the focal length.</p>
+<p class>Note</p>
+<p class>Modifing the field of view will change the focal length.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-odd">Raises:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.focal_length">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">focal_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#substance_painter.display.Camera.focal_length" title="Link to this definition"> </a></dt>
-<dd><p>The focal length of the camera in mm.
-This value is only used if the <code class="docutils literal notranslate"><span class="pre">CameraProjectionType</span></code> is <code class="docutils literal notranslate"><span class="pre">Perspective</span></code>.</p>
+<em class="property">property </em>focal_length<em class="property">: float</em><a class="headerlink" href="#substance_painter.display.Camera.focal_length" title="Link to this definition"> </a></dt>
+<dd><p class>The focal length of the camera in mm.
+This value is only used if the <code class="docutils literal notranslate">CameraProjectionType</code> is <code class="docutils literal notranslate">Perspective</code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the focal length of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the focal length of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the focal length of the camera. Value is clamped between 1 and 500.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the focal length of the camera. Value is clamped between 1 and 500.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>float</p>
 </dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Modifing the focal length will change the field of view.</p>
+<p class>Note</p>
+<p class>Modifing the focal length will change the field of view.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-odd">Raises:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.focus_distance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">focus_distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#substance_painter.display.Camera.focus_distance" title="Link to this definition"> </a></dt>
-<dd><p>The focus distance of the camera.
+<em class="property">property </em>focus_distance<em class="property">: float</em><a class="headerlink" href="#substance_painter.display.Camera.focus_distance" title="Link to this definition"> </a></dt>
+<dd><p class>The focus distance of the camera.
 Defines the distance at which the focus point is located.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the focus distance of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the focus distance of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the focus distance of the camera.
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the focus distance of the camera.
 Value is clamped between 0 and 10 * scene radius.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>float</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-even">Raises:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.aperture">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aperture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#substance_painter.display.Camera.aperture" title="Link to this definition"> </a></dt>
-<dd><p>The aperture of the camera. Defines how wide the Depth of Field will be.</p>
+<em class="property">property </em>aperture<em class="property">: float</em><a class="headerlink" href="#substance_painter.display.Camera.aperture" title="Link to this definition"> </a></dt>
+<dd><p class>The aperture of the camera. Defines how wide the Depth of Field will be.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the lens radius.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the lens radius.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the lens radius. Value is clamped between 0 and 1 * scene radius.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the lens radius. Value is clamped between 0 and 1 * scene radius.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>float</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-even">Raises:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.orthographic_height">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orthographic_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#substance_painter.display.Camera.orthographic_height" title="Link to this definition"> </a></dt>
-<dd><p>The orthographic height of the camera.
-This value is only used if the <code class="docutils literal notranslate"><span class="pre">CameraProjectionType</span></code> is <code class="docutils literal notranslate"><span class="pre">Orthographic</span></code>.</p>
+<em class="property">property </em>orthographic_height<em class="property">: float</em><a class="headerlink" href="#substance_painter.display.Camera.orthographic_height" title="Link to this definition"> </a></dt>
+<dd><p class>The orthographic height of the camera.
+This value is only used if the <code class="docutils literal notranslate">CameraProjectionType</code> is <code class="docutils literal notranslate">Orthographic</code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the orthographic height of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the orthographic height of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the orthographic height of the camera.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the orthographic height of the camera.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>float</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-even">Raises:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="substance_painter.display.Camera.projection_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">projection_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#substance_painter.display.CameraProjectionType" title="substance_painter.display.CameraProjectionType"><span class="pre">CameraProjectionType</span></a></em><a class="headerlink" href="#substance_painter.display.Camera.projection_type" title="Link to this definition"> </a></dt>
-<dd><p>The projection type (perspective or orthographic) of the camera.</p>
+<em class="property">property </em>projection_type<em class="property">: <a class="reference internal" href="#substance_painter.display.CameraProjectionType" title="substance_painter.display.CameraProjectionType">CameraProjectionType</a></em><a class="headerlink" href="#substance_painter.display.Camera.projection_type" title="Link to this definition"> </a></dt>
+<dd><p class>The projection type (perspective or orthographic) of the camera.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Getter<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the projection type of the camera.</p>
+<dt class="field-odd">Getter:</dt>
+<dd class="field-odd"><p class>Returns the projection type of the camera.</p>
 </dd>
-<dt class="field-even">Setter<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sets the projection type of the camera.</p>
+<dt class="field-even">Setter:</dt>
+<dd class="field-even"><p class>Sets the projection type of the camera.</p>
 </dd>
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.display.CameraProjectionType" title="substance_painter.display.CameraProjectionType">CameraProjectionType</a></p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="#substance_painter.display.CameraProjectionType" title="substance_painter.display.CameraProjectionType">CameraProjectionType</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-even">Raises:</dt>
+<dd class="field-even"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
-</dd></dl>
 
-</div>
-</div>
 
-</div>
-</div>
 
-</div>
+
+
+
+
+
+
 
 

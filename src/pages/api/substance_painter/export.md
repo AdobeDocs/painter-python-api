@@ -13,43 +13,43 @@ keywords:
 
 
 
-<div class="wy-grid-for-nav">
 
 
-<div class="wy-nav-content">
-<div class="rst-content style-external-links">
 
-<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
-<div itemprop="articleBody">
 
-<span id="export-module"></span><h1>export module<a class="headerlink" href="#module-substance_painter.export" title="Link to this heading"> </a></h1>
-<p>This module exposes functions to export assets (textures and meshes) from a project under a variety
+
+
+
+
+
+<h1>export module<a class="headerlink" href="#module-substance_painter.export" title="Link to this heading"> </a></h1>
+<p class>This module exposes functions to export assets (textures and meshes) from a project under a variety
 of formats. It is the scripting equivalent of the “Export textures” and the “Export mesh” windows.</p>
-<p>For the export textures, the export configuration is defined with a JSON file, but can also use
+<p class>For the export textures, the export configuration is defined with a JSON file, but can also use
 existing export presets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="substance_painter.export.ExportStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">ExportStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.export.ExportStatus" title="Link to this definition"> </a></dt>
-<dd><p>Status code of the export process.</p>
-<p>Members:</p>
+<em class="property">class </em>substance_painter.export.ExportStatus(<em class="sig-param">value</em>)<a class="headerlink" href="#substance_painter.export.ExportStatus" title="Link to this definition"> </a></dt>
+<dd><p class>Status code of the export process.</p>
+<p class>Members:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p class>Name</p></th>
+<th class="head"><p class>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Success</span></code></p></td>
-<td><p>The export was successful.</p></td>
+<tr class="row-even"><td><p class><code class="docutils literal notranslate">Success</code></p></td>
+<td><p class>The export was successful.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Cancelled</span></code></p></td>
-<td><p>The export was cancelled by the user.</p></td>
+<tr class="row-odd"><td><p class><code class="docutils literal notranslate">Cancelled</code></p></td>
+<td><p class>The export was cancelled by the user.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Warning</span></code></p></td>
-<td><p>The export completed with warnings.</p></td>
+<tr class="row-even"><td><p class><code class="docutils literal notranslate">Warning</code></p></td>
+<td><p class>The export completed with warnings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Error</span></code></p></td>
-<td><p>The export could not complete; the cause is detailed in the log.</p></td>
+<tr class="row-odd"><td><p class><code class="docutils literal notranslate">Error</code></p></td>
+<td><p class>The export could not complete; the cause is detailed in the log.</p></td>
 </tr>
 </tbody>
 </table>
@@ -58,107 +58,110 @@ existing export presets.</p>
 <h2>Export Textures<a class="headerlink" href="#export-textures" title="Link to this heading"> </a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.export.list_project_textures">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">list_project_textures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#substance_painter.export.list_project_textures" title="Link to this definition"> </a></dt>
-<dd><p>Get list of textures that would be exported according to the given JSON configuration.</p>
+substance_painter.export.list_project_textures(<em class="sig-param">json_config: dict</em>) → Dict[Tuple[str, str], List[str]]<a class="headerlink" href="#substance_painter.export.list_project_textures" title="Link to this definition"> </a></dt>
+<dd><p class>Get list of textures that would be exported according to the given JSON configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_config</strong> (<em>dict</em>) – JSON object representing the export configuration to be used.</p>
+<dt class="field-odd">Parameters:</dt>
+<dd class="field-odd"><p class><strong>json_config</strong> (<em>dict</em>) – JSON object representing the export configuration to be used.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>List of texture files
+<dt class="field-even">Returns:</dt>
+<dd class="field-even"><p class>List of texture files
 that would be exported, grouped by stack (Texture Set name, stack name).</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>Dict</em>[<em>Tuple</em>[str, str], <em>List</em>[str]]</p>
+<dt class="field-odd">Return type:</dt>
+<dd class="field-odd"><p class><em>Dict</em>[<em>Tuple</em>[str, str], <em>List</em>[str]]</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises:</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">json_config</span></code> is ill-formed, or is invalid in the context
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><strong>ValueError</strong> – If <code class="docutils literal notranslate">json_config</code> is ill-formed, or is invalid in the context
     of the current project.
     Contains a human readable message.</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#substance_painter.export.export_project_textures" title="substance_painter.export.export_project_textures"><code class="xref py py-func docutils literal notranslate"><span class="pre">export_project_textures()</span></code></a>.</p>
+<p class>See also</p>
+<p class><a class="reference internal" href="#substance_painter.export.export_project_textures" title="substance_painter.export.export_project_textures"><code class="xref py py-func docutils literal notranslate">export_project_textures()</code></a>.</p>
 </div>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="substance_painter.export.TextureExportResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">TextureExportResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus"><span class="pre">ExportStatus</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.export.TextureExportResult" title="Link to this definition"> </a></dt>
-<dd><p>Result of the export textures process</p>
+<em class="property">class </em>substance_painter.export.TextureExportResult(<em class="sig-param">status: <a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></em>, <em class="sig-param">message: str</em>, <em class="sig-param">textures: Dict[Tuple[str, str], List[str]]</em>)<a class="headerlink" href="#substance_painter.export.TextureExportResult" title="Link to this definition"> </a></dt>
+<dd><p class>Result of the export textures process</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="substance_painter.export.TextureExportResult.status">
-<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#substance_painter.export.TextureExportResult.status" title="Link to this definition"> </a></dt>
-<dd><p>Status code.</p>
+status<a class="headerlink" href="#substance_painter.export.TextureExportResult.status" title="Link to this definition"> </a></dt>
+<dd><p class>Status code.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="substance_painter.export.TextureExportResult.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#substance_painter.export.TextureExportResult.message" title="Link to this definition"> </a></dt>
-<dd><p>Human readable status message.</p>
+message<a class="headerlink" href="#substance_painter.export.TextureExportResult.message" title="Link to this definition"> </a></dt>
+<dd><p class>Human readable status message.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>str</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="substance_painter.export.TextureExportResult.textures">
-<span class="sig-name descname"><span class="pre">textures</span></span><a class="headerlink" href="#substance_painter.export.TextureExportResult.textures" title="Link to this definition"> </a></dt>
-<dd><p>List of texture files
+textures<a class="headerlink" href="#substance_painter.export.TextureExportResult.textures" title="Link to this definition"> </a></dt>
+<dd><p class>List of texture files
 written to disk, grouped by stack (Texture Set name, stack name).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>Dict</em>[<em>Tuple</em>[str, str], <em>List</em>[str]]</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class><em>Dict</em>[<em>Tuple</em>[str, str], <em>List</em>[str]]</p>
 </dd>
 </dl>
 </dd></dl>
 </dd></dl>
-<dl class="py function">
+
 <dt class="sig sig-object py" id="substance_painter.export.export_project_textures">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">export_project_textures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.export.TextureExportResult" title="substance_painter.export.TextureExportResult"><span class="pre">TextureExportResult</span></a></span></span><a class="headerlink" href="#substance_painter.export.export_project_textures" title="Link to this definition"> </a></dt>
-<dd><p>Export document textures according to the given JSON configuration. The
+substance_painter.export.export_project_textures(<em class="sig-param">json_config: dict</em>) → <a class="reference internal" href="#substance_painter.export.TextureExportResult" title="substance_painter.export.TextureExportResult">TextureExportResult</a><a class="headerlink" href="#substance_painter.export.export_project_textures" title="Link to this definition"> </a></dt>
+<p class>Export document textures according to the given JSON configuration. The
 return value contains the list of texture files written to disk.</p>
-<p>The status of the return value can never be <cite>Error</cite>, any error causing the
-*export* to fail will raise an exception instead. However if the *export* fails,
+<p class>The status of the return value can never be <cite>Error</cite>, any error causing the
+ export to fail will raise an exception instead. However if the  export fails,
 the associated event <cite>ExportTextureEnded</cite> will indeed receive <cite>Error</cite> as a
 status.
 If the export is cancelled by the user, the function return value will have
 the status <cite>Cancelled</cite> and contain the list of texture files written to disk
 before export was cancelled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_config</strong> (<em>dict</em>) – JSON object representing the export configuration to be used.</p>
+<dt class="field-odd">Parameters:</dt>
+<dd class="field-odd"><p class><strong>json_config</strong> (<em>dict</em>) – JSON object representing the export configuration to be used.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Result of the export process.</p>
+<dt class="field-even">Returns:</dt>
+<dd class="field-even"><p class>Result of the export process.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.export.TextureExportResult" title="substance_painter.export.TextureExportResult">TextureExportResult</a></p>
+<dt class="field-odd">Return type:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="#substance_painter.export.TextureExportResult" title="substance_painter.export.TextureExportResult">TextureExportResult</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises:</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">json_config</span></code> is ill-formed, or is invalid in the context
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><strong>ValueError</strong> – If <code class="docutils literal notranslate">json_config</code> is ill-formed, or is invalid in the context
     of the current project. Contains a human readable message detailing
     the problem.</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="event.html#substance_painter.event.ExportTexturesAboutToStart" title="substance_painter.event.ExportTexturesAboutToStart"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.ExportTexturesAboutToStart</span></code></a>,
-<a class="reference internal" href="event.html#substance_painter.event.ExportTexturesEnded" title="substance_painter.event.ExportTexturesEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.ExportTexturesEnded</span></code></a>.</p>
+<p class>See also</p>
+<p class><a class="reference internal" href="event.html#substance_painter.event.ExportTexturesAboutToStart" title="substance_painter.event.ExportTexturesAboutToStart"><code class="xref py py-class docutils literal notranslate">substance_painter.event.ExportTexturesAboutToStart</code></a>,
+<a class="reference internal" href="event.html#substance_painter.event.ExportTexturesEnded" title="substance_painter.event.ExportTexturesEnded"><code class="xref py py-class docutils literal notranslate">substance_painter.event.ExportTexturesEnded</code></a>.</p>
 </div>
-<p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre>import substance_painter.export
+<p class>Example:</p>
+
+
+```python
+import substance_painter.export
 
 # Open a project we want to export from (see substance_painter.project
 # for details). This step is not necessary if there is already a project
@@ -238,32 +241,37 @@ for k,v in export_result.textures.items():
 	print("Stack {0}:".format(k))
 	for exported in v:
 		print(exported)
-</pre></div>
-</div>
+```
+
+
+
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a>,
-<a class="reference internal" href="resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a>,
+<p class>See also</p>
+<p class><a class="reference internal" href="project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate">substance_painter.project</code></a>,
+<a class="reference internal" href="resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate">substance_painter.resource</code></a>,
 <a class="reference external" href="https://www.adobe.com/go/painter-export">Export documentation</a>.</p>
 </div>
-</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.export.get_default_export_path">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">get_default_export_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#substance_painter.export.get_default_export_path" title="Link to this definition"> </a></dt>
-<dd><p>Get the default export path used for exporting textures.</p>
+substance_painter.export.get_default_export_path() → str<a class="headerlink" href="#substance_painter.export.get_default_export_path" title="Link to this definition"> </a></dt>
+<dd><p class>Get the default export path used for exporting textures.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The default export path.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class>The default export path.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>str</p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class>str</p>
 </dd>
 </dl>
 </dd></dl>
 
 
 <h2>Full json_config dict possibilities<a class="headerlink" href="#full-json-config-dict-possibilities" title="Link to this heading"> </a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre>{
+
+
+```python
+{
 
 	// Path to the root folder where texture files will be exported.
 	"exportPath" : "C:/export",
@@ -547,62 +555,64 @@ for k,v in export_result.textures.items():
 	  }
 	}]
 }
-</pre></div>
-</div>
+```
+
+
+
 
 
 <h2>Events<a class="headerlink" href="#events" title="Link to this heading"> </a></h2>
-<p>Exporting textures, whether initiated through the Python API or in the UI,
+<p class>Exporting textures, whether initiated through the Python API or in the UI,
 can trigger the following events.
-See <a class="reference internal" href="event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a> for more details.</p>
+See <a class="reference internal" href="event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate">substance_painter.event</code></a> for more details.</p>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.event.</span></span><span class="sig-name descname"><span class="pre">ExportTexturesAboutToStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">textures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span></dt>
-<dd><p>Event triggered just before a textures export.</p>
+<em class="property">class </em>substance_painter.event.ExportTexturesAboutToStart(<em class="sig-param">textures: Dict[Tuple[str, str], List[str]]</em>)</dt>
+<dd><p class>Event triggered just before a textures export.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">textures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em></dt>
-<dd><p>List of texture files
+textures<em class="property">: Dict[Tuple[str, str], List[str]]</em></dt>
+<dd><p class>List of texture files
 to be written to disk, grouped by stack (Texture Set name, stack name).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Dict[Tuple[str, str], List[str]]</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>Dict[Tuple[str, str], List[str]]</p>
 </dd>
 </dl>
 </dd></dl>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.event.</span></span><span class="sig-name descname"><span class="pre">ExportTexturesEnded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus"><span class="pre">ExportStatus</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textures</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span></dt>
-<dd><p>Event triggered after textures export is finished.</p>
+<em class="property">class </em>substance_painter.event.ExportTexturesEnded(<em class="sig-param">status: <a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></em>, <em class="sig-param">message: str</em>, <em class="sig-param">textures: Dict[Tuple[str, str], List[str]]</em>)</dt>
+<dd><p class>Event triggered after textures export is finished.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
-<dd><p>Human readable status message.</p>
+message<em class="property">: str</em></dt>
+<dd><p class>Human readable status message.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>str</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus"><span class="pre">ExportStatus</span></a></em></dt>
-<dd><p>Status code.</p>
+status<em class="property">: <a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></em></dt>
+<dd><p class>Status code.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">textures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em></dt>
-<dd><p>List of texture files
+textures<em class="property">: Dict[Tuple[str, str], List[str]]</em></dt>
+<dd><p class>List of texture files
 written to disk, grouped by stack (Texture Set name, stack name).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Dict[Tuple[str, str], List[str]]</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>Dict[Tuple[str, str], List[str]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -612,63 +622,63 @@ written to disk, grouped by stack (Texture Set name, stack name).</p>
 <h2>Export Mesh<a class="headerlink" href="#export-mesh" title="Link to this heading"> </a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.export.scene_is_triangulated">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">scene_is_triangulated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#substance_painter.export.scene_is_triangulated" title="Link to this definition"> </a></dt>
-<dd><p>Check if the scene has only triangles (polygons with only 3 sides).</p>
+substance_painter.export.scene_is_triangulated() → bool<a class="headerlink" href="#substance_painter.export.scene_is_triangulated" title="Link to this definition"> </a></dt>
+<dd><p class>Check if the scene has only triangles (polygons with only 3 sides).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>True if the current scene has only triangles, False otherwise.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class>True if the current scene has only triangles, False otherwise.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>bool</p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class>bool</p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-odd">Raises:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="substance_painter.export.scene_has_tessellation">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">scene_has_tessellation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#substance_painter.export.scene_has_tessellation" title="Link to this definition"> </a></dt>
-<dd><p>Check if the scene has displacement/tessellation enabled.</p>
+substance_painter.export.scene_has_tessellation() → bool<a class="headerlink" href="#substance_painter.export.scene_has_tessellation" title="Link to this definition"> </a></dt>
+<dd><p class>Check if the scene has displacement/tessellation enabled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>True if the current scene has displacement/tessellation, False otherwise.</p>
+<dt class="field-odd">Returns:</dt>
+<dd class="field-odd"><p class>True if the current scene has displacement/tessellation, False otherwise.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>bool</p>
+<dt class="field-even">Return type:</dt>
+<dd class="field-even"><p class>bool</p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
+<dt class="field-odd">Raises:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="substance_painter.export.MeshExportOption">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">MeshExportOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.export.MeshExportOption" title="Link to this definition"> </a></dt>
-<dd><p>Options available for the mesh export.</p>
-<p>Members:</p>
+<em class="property">class </em>substance_painter.export.MeshExportOption(<em class="sig-param">value</em>)<a class="headerlink" href="#substance_painter.export.MeshExportOption" title="Link to this definition"> </a></dt>
+<dd><p class>Options available for the mesh export.</p>
+<p class>Members:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p class>Name</p></th>
+<th class="head"><p class>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BaseMesh</span></code></p></td>
-<td><p>Export without displacement/tesselation.</p></td>
+<tr class="row-even"><td><p class><code class="docutils literal notranslate">BaseMesh</code></p></td>
+<td><p class>Export without displacement/tesselation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">TriangulatedMesh</span></code></p></td>
-<td><p>Export without displacement/tesselation and apply triangulation.
+<tr class="row-odd"><td><p class><code class="docutils literal notranslate">TriangulatedMesh</code></p></td>
+<td><p class>Export without displacement/tesselation and apply triangulation.
 Triangulation converts all mesh polygons with more than 3 sides
 to triangles (but doesn’t change the triangular ones).
 Only avaiblable if the mesh contains such polygons.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TessellationNormalsBaseMesh</span></code></p></td>
-<td><p>Export with displacement/tessellation. Only available if
+<tr class="row-even"><td><p class><code class="docutils literal notranslate">TessellationNormalsBaseMesh</code></p></td>
+<td><p class>Export with displacement/tessellation. Only available if
 displacement or tessellation has been used in the shaders.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">TessellationRecomputeNormals</span></code></p></td>
-<td><p>Export with displacement/tessellation and recompute vertex
+<tr class="row-odd"><td><p class><code class="docutils literal notranslate">TessellationRecomputeNormals</code></p></td>
+<td><p class>Export with displacement/tessellation and recompute vertex
 normals. Only available if displacement or
 tessellation has been used in the shaders.</p></td>
 </tr>
@@ -677,59 +687,62 @@ tessellation has been used in the shaders.</p></td>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="substance_painter.export.MeshExportResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">MeshExportResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus"><span class="pre">ExportStatus</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#substance_painter.export.MeshExportResult" title="Link to this definition"> </a></dt>
-<dd><p>Result of the export mesh process</p>
+<em class="property">class </em>substance_painter.export.MeshExportResult(<em class="sig-param">status: <a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></em>, <em class="sig-param">message: str</em>)<a class="headerlink" href="#substance_painter.export.MeshExportResult" title="Link to this definition"> </a></dt>
+<dd><p class>Result of the export mesh process</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="substance_painter.export.MeshExportResult.status">
-<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#substance_painter.export.MeshExportResult.status" title="Link to this definition"> </a></dt>
-<dd><p>Status code.</p>
+status<a class="headerlink" href="#substance_painter.export.MeshExportResult.status" title="Link to this definition"> </a></dt>
+<dd><p class>Status code.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="#substance_painter.export.ExportStatus" title="substance_painter.export.ExportStatus">ExportStatus</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="substance_painter.export.MeshExportResult.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#substance_painter.export.MeshExportResult.message" title="Link to this definition"> </a></dt>
-<dd><p>Human readable status message.</p>
+message<a class="headerlink" href="#substance_painter.export.MeshExportResult.message" title="Link to this definition"> </a></dt>
+<dd><p class>Human readable status message.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
+<dt class="field-odd">Type:</dt>
+<dd class="field-odd"><p class>str</p>
 </dd>
 </dl>
 </dd></dl>
 </dd></dl>
-<dl class="py function">
+
 <dt class="sig sig-object py" id="substance_painter.export.export_mesh">
-<span class="sig-prename descclassname"><span class="pre">substance_painter.export.</span></span><span class="sig-name descname"><span class="pre">export_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#substance_painter.export.MeshExportOption" title="substance_painter.export.MeshExportOption"><span class="pre">MeshExportOption</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#substance_painter.export.MeshExportResult" title="substance_painter.export.MeshExportResult"><span class="pre">MeshExportResult</span></a></span></span><a class="headerlink" href="#substance_painter.export.export_mesh" title="Link to this definition"> </a></dt>
-<dd><p>Export the current mesh to the given file path.</p>
+substance_painter.export.export_mesh(<em class="sig-param">file_path: str</em>, <em class="sig-param">option: <a class="reference internal" href="#substance_painter.export.MeshExportOption" title="substance_painter.export.MeshExportOption">MeshExportOption</a></em>) → <a class="reference internal" href="#substance_painter.export.MeshExportResult" title="substance_painter.export.MeshExportResult">MeshExportResult</a><a class="headerlink" href="#substance_painter.export.export_mesh" title="Link to this definition"> </a></dt>
+<p class>Export the current mesh to the given file path.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters:</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>file_path</strong> (<em>string</em>) – The complete file path where to export the mesh. The file format is
+<li><p class><strong>file_path</strong> (<em>string</em>) – The complete file path where to export the mesh. The file format is
 deduced from the extension.
-Supported extensions are: <code class="docutils literal notranslate"><span class="pre">.usd</span></code>, <code class="docutils literal notranslate"><span class="pre">.obj</span></code>, <code class="docutils literal notranslate"><span class="pre">.fbx</span></code>, <code class="docutils literal notranslate"><span class="pre">.dae</span></code>, <code class="docutils literal notranslate"><span class="pre">.ply</span></code>, <code class="docutils literal notranslate"><span class="pre">.gltf</span></code>.</p></li>
-<li><p><strong>option</strong> (<a class="reference internal" href="#substance_painter.export.MeshExportOption" title="substance_painter.export.MeshExportOption"><em>MeshExportOption</em></a>) – The export option to use.</p></li>
+Supported extensions are: <code class="docutils literal notranslate">.usd</code>, <code class="docutils literal notranslate">.obj</code>, <code class="docutils literal notranslate">.fbx</code>, <code class="docutils literal notranslate">.dae</code>, <code class="docutils literal notranslate">.ply</code>, <code class="docutils literal notranslate">.gltf</code>.</p></li>
+<li><p class><strong>option</strong> (<a class="reference internal" href="#substance_painter.export.MeshExportOption" title="substance_painter.export.MeshExportOption"><em>MeshExportOption</em></a>) – The export option to use.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Result of the export process.</p>
+<dt class="field-even">Returns:</dt>
+<dd class="field-even"><p class>Result of the export process.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#substance_painter.export.MeshExportResult" title="substance_painter.export.MeshExportResult">MeshExportResult</a></p>
+<dt class="field-odd">Return type:</dt>
+<dd class="field-odd"><p class><a class="reference internal" href="#substance_painter.export.MeshExportResult" title="substance_painter.export.MeshExportResult">MeshExportResult</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises:</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">file_path</span></code> or <code class="docutils literal notranslate"><span class="pre">option</span></code> are invalid in the context
+<li><p class><a class="reference internal" href="exception.html#substance_painter.exception.ProjectError" title="substance_painter.exception.ProjectError"><strong>ProjectError</strong></a> – If no project is opened.</p></li>
+<li><p class><strong>ValueError</strong> – If <code class="docutils literal notranslate">file_path</code> or <code class="docutils literal notranslate">option</code> are invalid in the context
     of the current project. Contains a human readable message detailing
     the problem.</p></li>
 </ul>
 </dd>
 </dl>
-<p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre>import substance_painter.export
+<p class>Example:</p>
+
+
+```python
+import substance_painter.export
 
 # Open a project we want to export from (see substance_painter.project
 # for details). This step is not necessary if there is already a project
@@ -751,22 +764,24 @@ export_result = substance_painter.export.export_mesh(filename, export_option)
 # In case of error, display a human readable message:
 if export_result.status != substance_painter.export.ExportStatus.Success:
 	print(export_result.message)
-</pre></div>
-</div>
+```
+
+
+
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a>,
+<p class>See also</p>
+<p class><a class="reference internal" href="project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate">substance_painter.project</code></a>,
 <a class="reference external" href="https://www.adobe.com/go/painter-export">Export documentation</a>.</p>
 </div>
-</dd></dl>
 
 
-</div>
-</div>
 
-</div>
-</div>
 
-</div>
+
+
+
+
+
+
 
 
