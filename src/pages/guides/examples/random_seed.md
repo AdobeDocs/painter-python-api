@@ -13,12 +13,16 @@ Randomize all seeds in a project
 
 This example adds an action in the Edit menu to randomize all the random seed properties from the Substance present in the current project.
 
+---
 
-> To use this example:
+To use this example:
+
 > 1. Go to your Python plugin folder (see [this page](/guides/creating-python-plugin/) to know where)
 > 2. Create a folder named **blending_mode**
 > 3. Create a file named **__init__.py**
 > 4. Copy the code below inside the file.
+
+---
 
 ```python
 import os
