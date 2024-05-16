@@ -23,12 +23,8 @@ module.exports = {
 				path: '/'
 			},
 			{
-				title: 'Guides',
+				title: 'Guides & Examples',
 				path: '/guides/'
-			},
-			{
-				title: 'Examples',
-				path: '/examples/'
 			},
 			{
 				title: 'API Reference',
@@ -45,24 +41,45 @@ module.exports = {
 		],
 		subPages: [
 			{
-				title: "Guides",
+				title: "Guides & Examples",
 				header: true,
 				path: "/guides/",
 				pages: [
 					{
 						title : "Guides",
 						path: "/guides/",
-					}
-				]
-			},
-			{
-				title: "Examples",
-				header: true,
-				path: "/examples/",
-				pages: [
+						pages: [
+							{
+								title: "Creating a Python plugin",
+								path: "/guides/creating-python-plugin/"
+							},
+							{
+								title: "Using external modules",
+								path: "/guides/using-external-modules/"
+							},
+							{
+								title: "Using external plugins",
+								path: "/guides/loading-external-plugins/"
+							}
+						]
+					},
 					{
 						title : "Examples",
 						path: "/examples/",
+						pages: [
+							{
+								title: "Randomize all seeds in a project",
+								path: "/examples/random_seed/"
+							},
+							{
+								title: "Save and restore layer selection",
+								path: "/examples/save_selection/"
+							},
+							{
+								title: "Layer blending mode editor",
+								path: "/examples/blending_mode/"
+							}
+						]
 					}
 				]
 			},
