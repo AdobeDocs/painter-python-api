@@ -35,6 +35,16 @@ Get started with the Painter's Python API.
 
 ---
 
+### Guides
+
+A few example plugins are available to demonstrate how to use the API.
+
+- [Randomize all seeds in a project](guides/examples/random_seed.md)
+- [Save and restore layer selection](guides/examples/save_selection.md)
+- [Layer blending mode editor](guides/examples/blending_mode.md)
+
+---
+
 ### API Reference
 
 [API Reference](api/)
