@@ -65,19 +65,19 @@ module.exports = {
 					},
 					{
 						title : "Examples",
-						path: "/examples/",
+						path: "/guides/examples/",
 						pages: [
 							{
 								title: "Randomize all seeds in a project",
-								path: "/examples/random_seed/"
+								path: "/guides/examples/random_seed/"
 							},
 							{
 								title: "Save and restore layer selection",
-								path: "/examples/save_selection/"
+								path: "/guides/examples/save_selection/"
 							},
 							{
 								title: "Layer blending mode editor",
-								path: "/examples/blending_mode/"
+								path: "/guides/examples/blending_mode/"
 							}
 						]
 					}
