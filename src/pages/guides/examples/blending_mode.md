@@ -13,13 +13,18 @@ Layer blending mode editor
 
 This example shows how to gather in a dock the list of all the channels of the currently selected layer to be able to change their blending mode.
 
-To keep things simple, this example ignore effects.
+Note: to keep things simple, this example ignore effects.
 
-> To use this example:
+---
+
+To use this example:
+
 > 1. Go to your Python plugin folder (see [this page](/guides/creating-python-plugin/) to know where)
 > 2. Create a folder named **blending_mode**
 > 3. Create a file named **__init__.py**
 > 4. Copy the code below inside the file.
+
+---
 
 ```python
 import os
@@ -81,7 +86,6 @@ def BuildChannelUI( Layer, ChannelType, ChannelInfo ) :
 
 	# Connect a function to be able to change the
 	# blending mode from our own UI
-	# Based on: https://eli.thegreenplace.net/2011/04/25/passing-extra-arguments-to-pyqt-slot
 	Dropdown.currentIndexChanged.connect(
 		lambda: ChangeBlendMode( Layer, ChannelType, Dropdown )
 	)
@@ -120,7 +124,6 @@ def Update( Arg ) :
 		BuildChannelUI( Layers[0], ChannelType, Channels[ChannelType] )
 
 def ResetUI() :
-	# From: https://stackoverflow.com/questions/4528347/clear-all-widgets-in-a-layout-in-pyqt
 	if WIDGET_BLEND_LAYOUT :
 		while WIDGET_BLEND_LAYOUT.count():
 			child = WIDGET_BLEND_LAYOUT.takeAt(0)
