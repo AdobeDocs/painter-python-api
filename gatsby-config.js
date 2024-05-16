@@ -27,6 +27,10 @@ module.exports = {
 				path: '/guides/'
 			},
 			{
+				title: 'Examples',
+				path: '/examples/'
+			},
+			{
 				title: 'API Reference',
 				path: '/api/'
 			},
@@ -46,8 +50,19 @@ module.exports = {
 				path: "/guides/",
 				pages: [
 					{
-						title : "Home",
+						title : "Guides",
 						path: "/guides/",
+					}
+				]
+			},
+			{
+				title: "Examples",
+				header: true,
+				path: "/examples/",
+				pages: [
+					{
+						title : "Examples",
+						path: "/examples/",
 					}
 				]
 			},
