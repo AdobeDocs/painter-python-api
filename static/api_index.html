@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Substance 3D Painter Python API 0.2.11 Documentation &mdash; Substance 3D Painter Python API 0.2.11 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=29c81e07"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Writing plugins" href="plugins/index.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #f7f7f7" >
+
+
+
+          <a href="#" class="icon icon-home">
+            Substance 3D Painter Python API
+              <img src="_static/pt_appicon_256.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.2.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/index.html">Writing plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/substance_painter_plugins.html">substance_painter_plugins module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.path"><code class="docutils literal notranslate"><span class="pre">path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.plugins"><code class="docutils literal notranslate"><span class="pre">plugins</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.start_plugin"><code class="docutils literal notranslate"><span class="pre">start_plugin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.close_plugin"><code class="docutils literal notranslate"><span class="pre">close_plugin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.is_plugin_started"><code class="docutils literal notranslate"><span class="pre">is_plugin_started()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.reload_plugin"><code class="docutils literal notranslate"><span class="pre">reload_plugin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.startup_module_names"><code class="docutils literal notranslate"><span class="pre">startup_module_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.plugin_module_names"><code class="docutils literal notranslate"><span class="pre">plugin_module_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.load_startup_modules"><code class="docutils literal notranslate"><span class="pre">load_startup_modules()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.close_all_plugins"><code class="docutils literal notranslate"><span class="pre">close_all_plugins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/substance_painter_plugins.html#substance_painter_plugins.update_sys_path"><code class="docutils literal notranslate"><span class="pre">update_sys_path()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/index.html#examples-of-plugins">Examples of plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugins/hello_plugin.html">Hello Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/versioning_plugin.html">Versioning Plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="substance_painter/index.html">substance_painter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/application.html">application module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/application.html#substance_painter.application.version_info"><code class="docutils literal notranslate"><span class="pre">version_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/application.html#substance_painter.application.version"><code class="docutils literal notranslate"><span class="pre">version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/application.html#substance_painter.application.engine_computations_status"><code class="docutils literal notranslate"><span class="pre">engine_computations_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/application.html#substance_painter.application.enable_engine_computations"><code class="docutils literal notranslate"><span class="pre">enable_engine_computations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/application.html#substance_painter.application.disable_engine_computations"><code class="docutils literal notranslate"><span class="pre">disable_engine_computations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/application.html#substance_painter.application.close"><code class="docutils literal notranslate"><span class="pre">close()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/async_utils.html">async_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/async_utils.html#substance_painter.async_utils.StopSource"><code class="docutils literal notranslate"><span class="pre">StopSource</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/async_utils.html#substance_painter.async_utils.StopSource.request_stop"><code class="docutils literal notranslate"><span class="pre">StopSource.request_stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/async_utils.html#substance_painter.async_utils.StopSource.stop_requested"><code class="docutils literal notranslate"><span class="pre">StopSource.stop_requested()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/baking.html">baking module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingStatus"><code class="docutils literal notranslate"><span class="pre">BakingStatus</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.CurvatureMethod"><code class="docutils literal notranslate"><span class="pre">CurvatureMethod</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters"><code class="docutils literal notranslate"><span class="pre">BakingParameters</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.from_texture_set"><code class="docutils literal notranslate"><span class="pre">BakingParameters.from_texture_set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.from_texture_set_name"><code class="docutils literal notranslate"><span class="pre">BakingParameters.from_texture_set_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.texture_set"><code class="docutils literal notranslate"><span class="pre">BakingParameters.texture_set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.common"><code class="docutils literal notranslate"><span class="pre">BakingParameters.common()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.baker"><code class="docutils literal notranslate"><span class="pre">BakingParameters.baker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.get_curvature_method"><code class="docutils literal notranslate"><span class="pre">BakingParameters.get_curvature_method()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set_curvature_method"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_curvature_method()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.is_baker_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.is_baker_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set_baker_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_baker_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.get_enabled_bakers"><code class="docutils literal notranslate"><span class="pre">BakingParameters.get_enabled_bakers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set_enabled_bakers"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_enabled_bakers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.is_textureset_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.is_textureset_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set_textureset_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_textureset_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.is_uv_tile_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.is_uv_tile_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set_uv_tile_enabled"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_uv_tile_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.get_enabled_uv_tiles"><code class="docutils literal notranslate"><span class="pre">BakingParameters.get_enabled_uv_tiles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.BakingParameters.set_enabled_uv_tiles"><code class="docutils literal notranslate"><span class="pre">BakingParameters.set_enabled_uv_tiles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.set_linked_group"><code class="docutils literal notranslate"><span class="pre">set_linked_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.set_linked_group_common_parameters"><code class="docutils literal notranslate"><span class="pre">set_linked_group_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.unlink_all"><code class="docutils literal notranslate"><span class="pre">unlink_all()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.unlink_all_common_parameters"><code class="docutils literal notranslate"><span class="pre">unlink_all_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.get_link_group"><code class="docutils literal notranslate"><span class="pre">get_link_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.get_link_group_common_parameters"><code class="docutils literal notranslate"><span class="pre">get_link_group_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.get_linked_texture_sets"><code class="docutils literal notranslate"><span class="pre">get_linked_texture_sets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.get_linked_texture_sets_common_parameters"><code class="docutils literal notranslate"><span class="pre">get_linked_texture_sets_common_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.bake_async"><code class="docutils literal notranslate"><span class="pre">bake_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.bake_selected_textures_async"><code class="docutils literal notranslate"><span class="pre">bake_selected_textures_async()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/display.html">display module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.ToneMappingFunction"><code class="docutils literal notranslate"><span class="pre">ToneMappingFunction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.get_environment_resource"><code class="docutils literal notranslate"><span class="pre">get_environment_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.set_environment_resource"><code class="docutils literal notranslate"><span class="pre">set_environment_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.get_color_lut_resource"><code class="docutils literal notranslate"><span class="pre">get_color_lut_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.set_color_lut_resource"><code class="docutils literal notranslate"><span class="pre">set_color_lut_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.get_tone_mapping"><code class="docutils literal notranslate"><span class="pre">get_tone_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.set_tone_mapping"><code class="docutils literal notranslate"><span class="pre">set_tone_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.CameraProjectionType"><code class="docutils literal notranslate"><span class="pre">CameraProjectionType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.get_default_camera"><code class="docutils literal notranslate"><span class="pre">Camera.get_default_camera()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.position"><code class="docutils literal notranslate"><span class="pre">Camera.position</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.rotation"><code class="docutils literal notranslate"><span class="pre">Camera.rotation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.field_of_view"><code class="docutils literal notranslate"><span class="pre">Camera.field_of_view</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.focal_length"><code class="docutils literal notranslate"><span class="pre">Camera.focal_length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.focus_distance"><code class="docutils literal notranslate"><span class="pre">Camera.focus_distance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.aperture"><code class="docutils literal notranslate"><span class="pre">Camera.aperture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.orthographic_height"><code class="docutils literal notranslate"><span class="pre">Camera.orthographic_height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera.projection_type"><code class="docutils literal notranslate"><span class="pre">Camera.projection_type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/event.html">event module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#event-dispatcher">Event dispatcher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.DISPATCHER"><code class="docutils literal notranslate"><span class="pre">DISPATCHER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.Dispatcher"><code class="docutils literal notranslate"><span class="pre">Dispatcher</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#export-events">Export events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ExportTexturesAboutToStart"><code class="docutils literal notranslate"><span class="pre">ExportTexturesAboutToStart</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ExportTexturesEnded"><code class="docutils literal notranslate"><span class="pre">ExportTexturesEnded</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#project-events">Project events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectOpened"><code class="docutils literal notranslate"><span class="pre">ProjectOpened</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectCreated"><code class="docutils literal notranslate"><span class="pre">ProjectCreated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectAboutToClose"><code class="docutils literal notranslate"><span class="pre">ProjectAboutToClose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectAboutToSave"><code class="docutils literal notranslate"><span class="pre">ProjectAboutToSave</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectSaved"><code class="docutils literal notranslate"><span class="pre">ProjectSaved</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectEditionEntered"><code class="docutils literal notranslate"><span class="pre">ProjectEditionEntered</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectEditionLeft"><code class="docutils literal notranslate"><span class="pre">ProjectEditionLeft</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.BusyStatusChanged"><code class="docutils literal notranslate"><span class="pre">BusyStatusChanged</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.TextureStateEvent"><code class="docutils literal notranslate"><span class="pre">TextureStateEvent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.TextureStateEventAction"><code class="docutils literal notranslate"><span class="pre">TextureStateEventAction</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#shelf-events">Shelf events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ShelfCrawlingStarted"><code class="docutils literal notranslate"><span class="pre">ShelfCrawlingStarted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.ShelfCrawlingEnded"><code class="docutils literal notranslate"><span class="pre">ShelfCrawlingEnded</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#baking-events">Baking events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.BakingProcessAboutToStart"><code class="docutils literal notranslate"><span class="pre">BakingProcessAboutToStart</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.BakingProcessProgress"><code class="docutils literal notranslate"><span class="pre">BakingProcessProgress</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.BakingProcessEnded"><code class="docutils literal notranslate"><span class="pre">BakingProcessEnded</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#layer-stack-events">Layer stack events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.LayerStacksModelDataChanged"><code class="docutils literal notranslate"><span class="pre">LayerStacksModelDataChanged</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#application-wide-events">Application wide events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.EngineComputationsStatusChanged"><code class="docutils literal notranslate"><span class="pre">EngineComputationsStatusChanged</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/event.html#display-events">Display events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/event.html#substance_painter.event.CameraPropertiesChanged"><code class="docutils literal notranslate"><span class="pre">CameraPropertiesChanged</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/exception.html">exception module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/exception.html#substance_painter.exception.ProjectError"><code class="docutils literal notranslate"><span class="pre">ProjectError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/exception.html#substance_painter.exception.ResourceNotFoundError"><code class="docutils literal notranslate"><span class="pre">ResourceNotFoundError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/exception.html#substance_painter.exception.ServiceNotFoundError"><code class="docutils literal notranslate"><span class="pre">ServiceNotFoundError</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/export.html">export module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.ExportStatus"><code class="docutils literal notranslate"><span class="pre">ExportStatus</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/export.html#export-textures">Export Textures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.list_project_textures"><code class="docutils literal notranslate"><span class="pre">list_project_textures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.TextureExportResult"><code class="docutils literal notranslate"><span class="pre">TextureExportResult</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.export_project_textures"><code class="docutils literal notranslate"><span class="pre">export_project_textures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.get_project_export_config"><code class="docutils literal notranslate"><span class="pre">get_project_export_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.set_project_export_config"><code class="docutils literal notranslate"><span class="pre">set_project_export_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.get_default_export_path"><code class="docutils literal notranslate"><span class="pre">get_default_export_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.PredefinedExportPreset"><code class="docutils literal notranslate"><span class="pre">PredefinedExportPreset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.list_predefined_export_presets"><code class="docutils literal notranslate"><span class="pre">list_predefined_export_presets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.ResourceExportPreset"><code class="docutils literal notranslate"><span class="pre">ResourceExportPreset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.list_resource_export_presets"><code class="docutils literal notranslate"><span class="pre">list_resource_export_presets()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/export.html#full-json-config-dict-possibilities">Full json_config dict possibilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/export.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/export.html#export-mesh">Export Mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.scene_is_triangulated"><code class="docutils literal notranslate"><span class="pre">scene_is_triangulated()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.scene_has_tessellation"><code class="docutils literal notranslate"><span class="pre">scene_has_tessellation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.MeshExportOption"><code class="docutils literal notranslate"><span class="pre">MeshExportOption</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.MeshExportResult"><code class="docutils literal notranslate"><span class="pre">MeshExportResult</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/export.html#substance_painter.export.export_mesh"><code class="docutils literal notranslate"><span class="pre">export_mesh()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/js.html">js module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/js.html#substance_painter.js.evaluate"><code class="docutils literal notranslate"><span class="pre">evaluate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/layerstack.html">layerstack module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.BlendingMode"><code class="docutils literal notranslate"><span class="pre">BlendingMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.NodeType"><code class="docutils literal notranslate"><span class="pre">NodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.NodeStack"><code class="docutils literal notranslate"><span class="pre">NodeStack</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.MaskBackground"><code class="docutils literal notranslate"><span class="pre">MaskBackground</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ColorSelectionBackgroundColor"><code class="docutils literal notranslate"><span class="pre">ColorSelectionBackgroundColor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GeometryMaskType"><code class="docutils literal notranslate"><span class="pre">GeometryMaskType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ProjectionMode"><code class="docutils literal notranslate"><span class="pre">ProjectionMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FilteringMode"><code class="docutils literal notranslate"><span class="pre">FilteringMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.UVWrapMode"><code class="docutils literal notranslate"><span class="pre">UVWrapMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ShapeCropMode"><code class="docutils literal notranslate"><span class="pre">ShapeCropMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ScaleMode"><code class="docutils literal notranslate"><span class="pre">ScaleMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CompareMaskEffectOperand"><code class="docutils literal notranslate"><span class="pre">CompareMaskEffectOperand</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CompareMaskEffectOperation"><code class="docutils literal notranslate"><span class="pre">CompareMaskEffectOperation</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_type"><code class="docutils literal notranslate"><span class="pre">Node.get_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_texture_set"><code class="docutils literal notranslate"><span class="pre">Node.get_texture_set()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.is_visible"><code class="docutils literal notranslate"><span class="pre">Node.is_visible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.set_visible"><code class="docutils literal notranslate"><span class="pre">Node.set_visible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_name"><code class="docutils literal notranslate"><span class="pre">Node.get_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.set_name"><code class="docutils literal notranslate"><span class="pre">Node.set_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.is_in_mask_stack"><code class="docutils literal notranslate"><span class="pre">Node.is_in_mask_stack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.has_blending"><code class="docutils literal notranslate"><span class="pre">Node.has_blending()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_blending_mode"><code class="docutils literal notranslate"><span class="pre">Node.get_blending_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.set_blending_mode"><code class="docutils literal notranslate"><span class="pre">Node.set_blending_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_opacity"><code class="docutils literal notranslate"><span class="pre">Node.get_opacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.set_opacity"><code class="docutils literal notranslate"><span class="pre">Node.set_opacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_stack"><code class="docutils literal notranslate"><span class="pre">Node.get_stack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_parent"><code class="docutils literal notranslate"><span class="pre">Node.get_parent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_next_sibling"><code class="docutils literal notranslate"><span class="pre">Node.get_next_sibling()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Node.get_previous_sibling"><code class="docutils literal notranslate"><span class="pre">Node.get_previous_sibling()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode"><code class="docutils literal notranslate"><span class="pre">LayerNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.content_effects"><code class="docutils literal notranslate"><span class="pre">LayerNode.content_effects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.mask_effects"><code class="docutils literal notranslate"><span class="pre">LayerNode.mask_effects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.instances"><code class="docutils literal notranslate"><span class="pre">LayerNode.instances()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.get_geometry_mask_type"><code class="docutils literal notranslate"><span class="pre">LayerNode.get_geometry_mask_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.set_geometry_mask_type"><code class="docutils literal notranslate"><span class="pre">LayerNode.set_geometry_mask_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.get_geometry_mask_enabled_meshes"><code class="docutils literal notranslate"><span class="pre">LayerNode.get_geometry_mask_enabled_meshes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.set_geometry_mask_enabled_meshes"><code class="docutils literal notranslate"><span class="pre">LayerNode.set_geometry_mask_enabled_meshes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.get_geometry_mask_enabled_uv_tiles"><code class="docutils literal notranslate"><span class="pre">LayerNode.get_geometry_mask_enabled_uv_tiles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.set_geometry_mask_enabled_uv_tiles"><code class="docutils literal notranslate"><span class="pre">LayerNode.set_geometry_mask_enabled_uv_tiles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.has_mask"><code class="docutils literal notranslate"><span class="pre">LayerNode.has_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.add_mask"><code class="docutils literal notranslate"><span class="pre">LayerNode.add_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.remove_mask"><code class="docutils literal notranslate"><span class="pre">LayerNode.remove_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.get_mask_background"><code class="docutils literal notranslate"><span class="pre">LayerNode.get_mask_background()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.set_mask_background"><code class="docutils literal notranslate"><span class="pre">LayerNode.set_mask_background()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.is_mask_enabled"><code class="docutils literal notranslate"><span class="pre">LayerNode.is_mask_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LayerNode.enable_mask"><code class="docutils literal notranslate"><span class="pre">LayerNode.enable_mask()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GroupLayerNode"><code class="docutils literal notranslate"><span class="pre">GroupLayerNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GroupLayerNode.sub_layers"><code class="docutils literal notranslate"><span class="pre">GroupLayerNode.sub_layers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GroupLayerNode.is_collapsed"><code class="docutils literal notranslate"><span class="pre">GroupLayerNode.is_collapsed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GroupLayerNode.set_collapsed"><code class="docutils literal notranslate"><span class="pre">GroupLayerNode.set_collapsed()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.PaintLayerNode"><code class="docutils literal notranslate"><span class="pre">PaintLayerNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.InstanceLayerNode"><code class="docutils literal notranslate"><span class="pre">InstanceLayerNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.InstanceLayerNode.instance_source"><code class="docutils literal notranslate"><span class="pre">InstanceLayerNode.instance_source()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GeneratorEffectNode"><code class="docutils literal notranslate"><span class="pre">GeneratorEffectNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GeneratorEffectNode.set_generator"><code class="docutils literal notranslate"><span class="pre">GeneratorEffectNode.set_generator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.GeneratorEffectNode.get_generator"><code class="docutils literal notranslate"><span class="pre">GeneratorEffectNode.get_generator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.PaintEffectNode"><code class="docutils literal notranslate"><span class="pre">PaintEffectNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillEffectNode"><code class="docutils literal notranslate"><span class="pre">FillEffectNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillEffectNode.get_projection_mode"><code class="docutils literal notranslate"><span class="pre">FillEffectNode.get_projection_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillEffectNode.get_projection_parameters"><code class="docutils literal notranslate"><span class="pre">FillEffectNode.get_projection_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillEffectNode.set_projection_mode"><code class="docutils literal notranslate"><span class="pre">FillEffectNode.set_projection_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillEffectNode.set_projection_parameters"><code class="docutils literal notranslate"><span class="pre">FillEffectNode.set_projection_parameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LevelsEffectParamsRGB"><code class="docutils literal notranslate"><span class="pre">LevelsEffectParamsRGB</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LevelsEffectParamsMono"><code class="docutils literal notranslate"><span class="pre">LevelsEffectParamsMono</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LevelsEffectParams"><code class="docutils literal notranslate"><span class="pre">LevelsEffectParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LevelsEffectNode"><code class="docutils literal notranslate"><span class="pre">LevelsEffectNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LevelsEffectNode.get_parameters"><code class="docutils literal notranslate"><span class="pre">LevelsEffectNode.get_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.LevelsEffectNode.set_parameters"><code class="docutils literal notranslate"><span class="pre">LevelsEffectNode.set_parameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CompareMaskEffectParams"><code class="docutils literal notranslate"><span class="pre">CompareMaskEffectParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CompareMaskEffectNode"><code class="docutils literal notranslate"><span class="pre">CompareMaskEffectNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CompareMaskEffectNode.get_parameters"><code class="docutils literal notranslate"><span class="pre">CompareMaskEffectNode.get_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CompareMaskEffectNode.set_parameters"><code class="docutils literal notranslate"><span class="pre">CompareMaskEffectNode.set_parameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FilterEffectNode"><code class="docutils literal notranslate"><span class="pre">FilterEffectNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FilterEffectNode.set_filter"><code class="docutils literal notranslate"><span class="pre">FilterEffectNode.set_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FilterEffectNode.get_filter"><code class="docutils literal notranslate"><span class="pre">FilterEffectNode.get_filter()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ColorSelectionEffectParams"><code class="docutils literal notranslate"><span class="pre">ColorSelectionEffectParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ColorSelectionEffectNode"><code class="docutils literal notranslate"><span class="pre">ColorSelectionEffectNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ColorSelectionEffectNode.get_parameters"><code class="docutils literal notranslate"><span class="pre">ColorSelectionEffectNode.get_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ColorSelectionEffectNode.set_parameters"><code class="docutils literal notranslate"><span class="pre">ColorSelectionEffectNode.set_parameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.AnchorPointEffectNode"><code class="docutils literal notranslate"><span class="pre">AnchorPointEffectNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillLayerNode"><code class="docutils literal notranslate"><span class="pre">FillLayerNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillLayerNode.get_projection_mode"><code class="docutils literal notranslate"><span class="pre">FillLayerNode.get_projection_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillLayerNode.get_projection_parameters"><code class="docutils literal notranslate"><span class="pre">FillLayerNode.get_projection_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillLayerNode.set_projection_mode"><code class="docutils literal notranslate"><span class="pre">FillLayerNode.set_projection_mode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillLayerNode.set_projection_parameters"><code class="docutils literal notranslate"><span class="pre">FillLayerNode.set_projection_parameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.get_root_layers"><code class="docutils literal notranslate"><span class="pre">get_root_layers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.get_selected_nodes"><code class="docutils literal notranslate"><span class="pre">get_selected_nodes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.delete_node"><code class="docutils literal notranslate"><span class="pre">delete_node()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.InsertPosition"><code class="docutils literal notranslate"><span class="pre">InsertPosition</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.InsertPosition.from_textureset_stack"><code class="docutils literal notranslate"><span class="pre">InsertPosition.from_textureset_stack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.InsertPosition.from_node"><code class="docutils literal notranslate"><span class="pre">InsertPosition.from_node()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_smart_material"><code class="docutils literal notranslate"><span class="pre">insert_smart_material()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Color"><code class="docutils literal notranslate"><span class="pre">Color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillInitParam"><code class="docutils literal notranslate"><span class="pre">FillInitParam</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillInitParam.from_material_resource"><code class="docutils literal notranslate"><span class="pre">FillInitParam.from_material_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.FillInitParam.from_colors"><code class="docutils literal notranslate"><span class="pre">FillInitParam.from_colors()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.UVTransformationParams"><code class="docutils literal notranslate"><span class="pre">UVTransformationParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.Projection3DParams"><code class="docutils literal notranslate"><span class="pre">Projection3DParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ProjectionCullingParams"><code class="docutils literal notranslate"><span class="pre">ProjectionCullingParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.UVProjectionParams"><code class="docutils literal notranslate"><span class="pre">UVProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.TriplanarProjectionParams"><code class="docutils literal notranslate"><span class="pre">TriplanarProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.PlanarProjectionParams"><code class="docutils literal notranslate"><span class="pre">PlanarProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.WarpProjectionParams"><code class="docutils literal notranslate"><span class="pre">WarpProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.SphericalProjectionParams"><code class="docutils literal notranslate"><span class="pre">SphericalProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.CylindricalProjectionParams"><code class="docutils literal notranslate"><span class="pre">CylindricalProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.UVSetToUVSetProjectionParams"><code class="docutils literal notranslate"><span class="pre">UVSetToUVSetProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.ProjectionParams"><code class="docutils literal notranslate"><span class="pre">ProjectionParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_fill"><code class="docutils literal notranslate"><span class="pre">insert_fill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_paint"><code class="docutils literal notranslate"><span class="pre">insert_paint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_group"><code class="docutils literal notranslate"><span class="pre">insert_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.instantiate"><code class="docutils literal notranslate"><span class="pre">instantiate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_levels_effect"><code class="docutils literal notranslate"><span class="pre">insert_levels_effect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_compare_mask_effect"><code class="docutils literal notranslate"><span class="pre">insert_compare_mask_effect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_filter_effect"><code class="docutils literal notranslate"><span class="pre">insert_filter_effect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_generator_effect"><code class="docutils literal notranslate"><span class="pre">insert_generator_effect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_anchor_point_effect"><code class="docutils literal notranslate"><span class="pre">insert_anchor_point_effect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_color_selection_effect"><code class="docutils literal notranslate"><span class="pre">insert_color_selection_effect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/layerstack.html#substance_painter.layerstack.insert_smart_mask"><code class="docutils literal notranslate"><span class="pre">insert_smart_mask()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/logging.html">logging module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/logging.html#substance_painter.logging.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/logging.html#substance_painter.logging.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/logging.html#substance_painter.logging.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/logging.html#substance_painter.logging.warning"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/project.html">project module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.BoundingBox"><code class="docutils literal notranslate"><span class="pre">BoundingBox</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.BoundingBox.dimensions"><code class="docutils literal notranslate"><span class="pre">BoundingBox.dimensions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.BoundingBox.center"><code class="docutils literal notranslate"><span class="pre">BoundingBox.center</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.BoundingBox.radius"><code class="docutils literal notranslate"><span class="pre">BoundingBox.radius</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.execute_when_not_busy"><code class="docutils literal notranslate"><span class="pre">execute_when_not_busy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.file_path"><code class="docutils literal notranslate"><span class="pre">file_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.get_scene_bounding_box"><code class="docutils literal notranslate"><span class="pre">get_scene_bounding_box()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.get_uuid"><code class="docutils literal notranslate"><span class="pre">get_uuid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.is_busy"><code class="docutils literal notranslate"><span class="pre">is_busy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.is_in_edition_state"><code class="docutils literal notranslate"><span class="pre">is_in_edition_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.last_saved_substance_painter_version"><code class="docutils literal notranslate"><span class="pre">last_saved_substance_painter_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.name"><code class="docutils literal notranslate"><span class="pre">name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#creating-a-project">Creating a project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.create"><code class="docutils literal notranslate"><span class="pre">create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.UsdSettings"><code class="docutils literal notranslate"><span class="pre">UsdSettings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.NormalMapFormat"><code class="docutils literal notranslate"><span class="pre">NormalMapFormat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.TangentSpace"><code class="docutils literal notranslate"><span class="pre">TangentSpace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.ProjectWorkflow"><code class="docutils literal notranslate"><span class="pre">ProjectWorkflow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#opening-and-closing-a-project">Opening and closing a project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.is_open"><code class="docutils literal notranslate"><span class="pre">is_open()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.open"><code class="docutils literal notranslate"><span class="pre">open()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.close"><code class="docutils literal notranslate"><span class="pre">close()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#saving-a-project">Saving a project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.needs_saving"><code class="docutils literal notranslate"><span class="pre">needs_saving()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.save"><code class="docutils literal notranslate"><span class="pre">save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.save_as"><code class="docutils literal notranslate"><span class="pre">save_as()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.save_as_copy"><code class="docutils literal notranslate"><span class="pre">save_as_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.save_as_template"><code class="docutils literal notranslate"><span class="pre">save_as_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.ProjectSaveMode"><code class="docutils literal notranslate"><span class="pre">ProjectSaveMode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#reloading-a-mesh">Reloading a mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.reload_mesh"><code class="docutils literal notranslate"><span class="pre">reload_mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.last_imported_mesh_path"><code class="docutils literal notranslate"><span class="pre">last_imported_mesh_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.MeshReloadingSettings"><code class="docutils literal notranslate"><span class="pre">MeshReloadingSettings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.ReloadMeshStatus"><code class="docutils literal notranslate"><span class="pre">ReloadMeshStatus</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#project-metadata">Project metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/project.html#substance_painter.project.Metadata"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/project.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/properties.html">properties module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property"><code class="docutils literal notranslate"><span class="pre">Property</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.value"><code class="docutils literal notranslate"><span class="pre">Property.value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.name"><code class="docutils literal notranslate"><span class="pre">Property.name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.short_name"><code class="docutils literal notranslate"><span class="pre">Property.short_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.label"><code class="docutils literal notranslate"><span class="pre">Property.label()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.widget_type"><code class="docutils literal notranslate"><span class="pre">Property.widget_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.enum_values"><code class="docutils literal notranslate"><span class="pre">Property.enum_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.enum_value"><code class="docutils literal notranslate"><span class="pre">Property.enum_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/properties.html#substance_painter.properties.Property.properties"><code class="docutils literal notranslate"><span class="pre">Property.properties()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/resource.html">resource module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Type"><code class="docutils literal notranslate"><span class="pre">Type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/resource.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#manipulating-resources">Manipulating resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#importing-resources">Importing resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#resources-used-by-a-project">Resources used by a project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#custom-preview">Custom preview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#resource-crawling">Resource crawling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/resource.html#resources">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.ResourceID"><code class="docutils literal notranslate"><span class="pre">ResourceID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.ResourceLocation"><code class="docutils literal notranslate"><span class="pre">ResourceLocation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.StandardQuery"><code class="docutils literal notranslate"><span class="pre">StandardQuery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Usage"><code class="docutils literal notranslate"><span class="pre">Usage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.search"><code class="docutils literal notranslate"><span class="pre">search()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.list_layer_stack_resources"><code class="docutils literal notranslate"><span class="pre">list_layer_stack_resources()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.update_layer_stack_resource"><code class="docutils literal notranslate"><span class="pre">update_layer_stack_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.import_project_resource"><code class="docutils literal notranslate"><span class="pre">import_project_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.import_session_resource"><code class="docutils literal notranslate"><span class="pre">import_session_resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.show_resources_in_ui"><code class="docutils literal notranslate"><span class="pre">show_resources_in_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/resource.html#shelves">Shelves</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Shelf"><code class="docutils literal notranslate"><span class="pre">Shelf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Shelves"><code class="docutils literal notranslate"><span class="pre">Shelves</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/resource.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/source.html">source module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceType"><code class="docutils literal notranslate"><span class="pre">SourceType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceMode"><code class="docutils literal notranslate"><span class="pre">SourceMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.source_mode"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.source_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.active_channels"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.active_channels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.get_source"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.get_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.set_source"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.set_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.reset_source"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.reset_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.get_material_source"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.get_material_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.set_material_source"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.set_material_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceEditorMixin.reset_material_source"><code class="docutils literal notranslate"><span class="pre">SourceEditorMixin.reset_material_source()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceUniformColor"><code class="docutils literal notranslate"><span class="pre">SourceUniformColor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceUniformColor.color"><code class="docutils literal notranslate"><span class="pre">SourceUniformColor.color</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceBitmap"><code class="docutils literal notranslate"><span class="pre">SourceBitmap</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceBitmap.resource"><code class="docutils literal notranslate"><span class="pre">SourceBitmap.resource</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceSVG"><code class="docutils literal notranslate"><span class="pre">SourceSVG</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceSVG.resource"><code class="docutils literal notranslate"><span class="pre">SourceSVG.resource</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.OutputMappingIterator"><code class="docutils literal notranslate"><span class="pre">OutputMappingIterator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.OutputMapping"><code class="docutils literal notranslate"><span class="pre">OutputMapping</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural"><code class="docutils literal notranslate"><span class="pre">SourceProcedural</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.resource"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.resource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.output_mapping"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.output_mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.active_output"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.active_output</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.get_source"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.get_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.set_source"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.set_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.reset_source"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.reset_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.parameters"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceProcedural.set_parameters"><code class="docutils literal notranslate"><span class="pre">SourceProcedural.set_parameters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.ChannelMappingIterator"><code class="docutils literal notranslate"><span class="pre">ChannelMappingIterator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.ChannelMapping"><code class="docutils literal notranslate"><span class="pre">ChannelMapping</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceReference"><code class="docutils literal notranslate"><span class="pre">SourceReference</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceReference.channel_mapping"><code class="docutils literal notranslate"><span class="pre">SourceReference.channel_mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/source.html#substance_painter.source.SourceReference.active_channel"><code class="docutils literal notranslate"><span class="pre">SourceReference.active_channel</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/textureset/index.html">textureset module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/channel.html">Channel class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/textureset/channel.html#substance_painter.textureset.Channel"><code class="docutils literal notranslate"><span class="pre">Channel</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/stack.html">Stack class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/textureset/stack.html#substance_painter.textureset.Stack"><code class="docutils literal notranslate"><span class="pre">Stack</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/uvtile.html">UVTile class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/textureset/uvtile.html#substance_painter.textureset.UVTile"><code class="docutils literal notranslate"><span class="pre">UVTile</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/textureset.html">TextureSet class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet"><code class="docutils literal notranslate"><span class="pre">TextureSet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.ChannelFormat"><code class="docutils literal notranslate"><span class="pre">ChannelFormat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.ChannelType"><code class="docutils literal notranslate"><span class="pre">ChannelType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.MeshMapUsage"><code class="docutils literal notranslate"><span class="pre">MeshMapUsage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.Resolution"><code class="docutils literal notranslate"><span class="pre">Resolution</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.Resolution.width"><code class="docutils literal notranslate"><span class="pre">Resolution.width</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.Resolution.height"><code class="docutils literal notranslate"><span class="pre">Resolution.height</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.all_texture_sets"><code class="docutils literal notranslate"><span class="pre">all_texture_sets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.get_active_stack"><code class="docutils literal notranslate"><span class="pre">get_active_stack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.set_active_stack"><code class="docutils literal notranslate"><span class="pre">set_active_stack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.set_resolutions"><code class="docutils literal notranslate"><span class="pre">set_resolutions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/ui.html">ui module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.UIMode"><code class="docutils literal notranslate"><span class="pre">UIMode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.ApplicationMenu"><code class="docutils literal notranslate"><span class="pre">ApplicationMenu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.show_main_window"><code class="docutils literal notranslate"><span class="pre">show_main_window()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_main_window"><code class="docutils literal notranslate"><span class="pre">get_main_window()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_layout"><code class="docutils literal notranslate"><span class="pre">get_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_layout_mode"><code class="docutils literal notranslate"><span class="pre">get_layout_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.set_layout"><code class="docutils literal notranslate"><span class="pre">set_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.reset_layout"><code class="docutils literal notranslate"><span class="pre">reset_layout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.add_dock_widget"><code class="docutils literal notranslate"><span class="pre">add_dock_widget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.add_plugins_toolbar_widget"><code class="docutils literal notranslate"><span class="pre">add_plugins_toolbar_widget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.add_menu"><code class="docutils literal notranslate"><span class="pre">add_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.add_toolbar"><code class="docutils literal notranslate"><span class="pre">add_toolbar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.add_action"><code class="docutils literal notranslate"><span class="pre">add_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.delete_ui_element"><code class="docutils literal notranslate"><span class="pre">delete_ui_element()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_current_mode"><code class="docutils literal notranslate"><span class="pre">get_current_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.switch_to_mode"><code class="docutils literal notranslate"><span class="pre">switch_to_mode()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #f7f7f7" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Substance 3D Painter Python API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Substance 3D Painter Python API 0.2.11 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="plugins/index.html" class="btn btn-neutral float-right" title="Writing plugins" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="substance-3d-painter-python-api-version-documentation">
+<h1>Substance 3D Painter Python API 0.2.11 Documentation<a class="headerlink" href="#substance-3d-painter-python-api-version-documentation" title="Link to this heading"></a></h1>
+<p>The Python API provides access to Substance 3D Painter functionalities via Python
+scripts for Substance 3D Painter. This documentation contains the detailed API as
+well as examples and samples.</p>
+<p>This documentation is about a scripting API; follow this link for the
+<a class="reference external" href="https://www.adobe.com/go/Substance-3D-doc-Painter">Substance 3D Painter documentation</a>.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/index.html">Writing plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins/substance_painter_plugins.html">substance_painter_plugins module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/index.html#examples-of-plugins">Examples of plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="substance_painter/index.html">substance_painter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/application.html">application module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/async_utils.html">async_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/baking.html">baking module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/display.html">display module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/event.html">event module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/exception.html">exception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/export.html">export module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/js.html">js module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/layerstack.html">layerstack module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/logging.html">logging module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/project.html">project module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/properties.html">properties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/resource.html">resource module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/source.html">source module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/textureset/index.html">textureset module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substance_painter/ui.html">ui module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h1>
+<section id="substance-3d-painter-10-0-0">
+<h2>0.2.13 (Substance 3D painter 10.0.0)<a class="headerlink" href="#substance-3d-painter-10-0-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/export.html#module-substance_painter.export" title="substance_painter.export"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.export</span></code></a></dt><dd><ul>
+<li><p>Add ability to get and set the export config used for exporting textures.</p></li>
+<li><p>Add ability to list export presets and introspect their output maps.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/layerstack.html#module-substance_painter.layerstack" title="substance_painter.layerstack"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.layerstack</span></code></a></dt><dd><ul>
+<li><p>New module to manipulate the layer stack.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/source.html#module-substance_painter.source" title="substance_painter.source"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.source</span></code></a></dt><dd><ul>
+<li><p>New module to manipulate layer’s sources.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-9-1-1">
+<h2>0.2.12 (Substance 3D painter 9.1.1)<a class="headerlink" href="#substance-3d-painter-9-1-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.get_uuid" title="substance_painter.project.get_uuid"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.get_uuid()</span></code></a> to query the project UUID.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-9-1-0">
+<h2>0.2.11 (Substance 3D painter 9.1.0)<a class="headerlink" href="#substance-3d-painter-9-1-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/application.html#module-substance_painter.application" title="substance_painter.application"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.application</span></code></a></dt><dd><ul>
+<li><p>Add ability to disable engine computations</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/application.html#substance_painter.application.close" title="substance_painter.application.close"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.application.close()</span></code></a> to close Substance 3D Painter.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/display.html#module-substance_painter.display" title="substance_painter.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.display</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/display.html#substance_painter.display.Camera" title="substance_painter.display.Camera"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.display.Camera</span></code></a> to manipulate camera settings.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></dt><dd><ul>
+<li><p>Add a new event <a class="reference internal" href="substance_painter/event.html#substance_painter.event.EngineComputationsStatusChanged" title="substance_painter.event.EngineComputationsStatusChanged"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.EngineComputationsStatusChanged</span></code></a> to be notified when engine computations status changes.</p></li>
+<li><p>Add a new event <a class="reference internal" href="substance_painter/event.html#substance_painter.event.CameraPropertiesChanged" title="substance_painter.event.CameraPropertiesChanged"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.CameraPropertiesChanged</span></code></a> to be notified when the properties of a camera change.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/export.html#module-substance_painter.export" title="substance_painter.export"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.export</span></code></a></dt><dd><ul>
+<li><p>Add ability to export the mesh of the current project.</p></li>
+<li><p>Add ability to get the default export path used for exporting textures.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.BoundingBox" title="substance_painter.project.BoundingBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.BoundingBox</span></code></a> and <a class="reference internal" href="substance_painter/project.html#substance_painter.project.get_scene_bounding_box" title="substance_painter.project.get_scene_bounding_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.get_scene_bounding_box()</span></code></a> to query dimensions of the scene.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-9-0-0">
+<h2>0.2.10 (Substance 3D painter 9.0.0)<a class="headerlink" href="#substance-3d-painter-9-0-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/export.html#module-substance_painter.export" title="substance_painter.export"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.export</span></code></a></dt><dd><ul>
+<li><p>Fix textures exported in EXR with 32f bit depth were incorrectly saved in 16f.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.UsdSettings" title="substance_painter.project.UsdSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.UsdSettings</span></code></a> in <a class="reference internal" href="substance_painter/project.html#substance_painter.project.Settings" title="substance_painter.project.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.Settings</span></code></a> to support USD parameters for project creation.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.UsdSettings" title="substance_painter.project.UsdSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.UsdSettings</span></code></a> in <a class="reference internal" href="substance_painter/project.html#substance_painter.project.MeshReloadingSettings" title="substance_painter.project.MeshReloadingSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.MeshReloadingSettings</span></code></a> to support USD parameters for mesh reloading.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-8-3-1">
+<h2>0.2.9 (Substance 3D Painter 8.3.1)<a class="headerlink" href="#substance-3d-painter-8-3-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/async_utils.html#module-substance_painter.async_utils" title="substance_painter.async_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.async_utils</span></code></a></dt><dd><ul>
+<li><p>New module to expose primitives used in async computations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></dt><dd><ul>
+<li><p>Add a new event <a class="reference internal" href="substance_painter/event.html#substance_painter.event.BakingProcessProgress" title="substance_painter.event.BakingProcessProgress"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessProgress</span></code></a> to be notified about baking process progress.</p></li>
+<li><p>Add a new event <a class="reference internal" href="substance_painter/event.html#substance_painter.event.BakingProcessAboutToStart" title="substance_painter.event.BakingProcessAboutToStart"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessAboutToStart</span></code></a> to be notified of the start of a baking process.</p></li>
+<li><p>Allow to configure throttling period for <a class="reference internal" href="substance_painter/event.html#substance_painter.event.TextureStateEvent" title="substance_painter.event.TextureStateEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.TextureStateEvent</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/baking.html#module-substance_painter.baking" title="substance_painter.baking"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.baking</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.bake_selected_textures_async" title="substance_painter.baking.bake_selected_textures_async"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.baking.bake_selected_textures_async()</span></code></a> to bake all selected texture set.</p></li>
+<li><p>Fix <a class="reference internal" href="substance_painter/baking.html#substance_painter.baking.bake_async" title="substance_painter.baking.bake_async"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.baking.bake_async()</span></code></a> to take UV Tiles selection into account.</p></li>
+<li><p>Now async functions return a <a class="reference internal" href="substance_painter/async_utils.html#substance_painter.async_utils.StopSource" title="substance_painter.async_utils.StopSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.async_utils.StopSource</span></code></a> to allow for cancellation.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-8-3-0">
+<h2>0.2.8 (Substance 3D Painter 8.3.0)<a class="headerlink" href="#substance-3d-painter-8-3-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/application.html#module-substance_painter.application" title="substance_painter.application"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.application</span></code></a></dt><dd><ul>
+<li><p>New module to expose functionnalities on the application level.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/application.html#substance_painter.application.version_info" title="substance_painter.application.version_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.application.version_info()</span></code></a> to query Substance 3D Painter version as a tuple.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/application.html#substance_painter.application.version" title="substance_painter.application.version"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.application.version()</span></code></a> to query Substance 3D Painter version as a string.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></dt><dd><ul>
+<li><p>Add a new event <a class="reference internal" href="substance_painter/event.html#substance_painter.event.BakingProcessEnded" title="substance_painter.event.BakingProcessEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.BakingProcessEnded</span></code></a> to be notified of the end of the baking process.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.last_saved_substance_painter_version" title="substance_painter.project.last_saved_substance_painter_version"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.last_saved_substance_painter_version()</span></code></a> to query wich Substance 3D
+Painter version was used to last save the project.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.uv_tile" title="substance_painter.textureset.TextureSet.uv_tile"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.uv_tile()</span></code></a> to get a specific UV Tile.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/ui.html#module-substance_painter.ui" title="substance_painter.ui"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.ui</span></code></a></dt><dd><ul>
+<li><p>Add Baking to <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.UIMode" title="substance_painter.ui.UIMode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">substance_painter.ui.UIMode</span></code></a>.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_current_mode" title="substance_painter.ui.get_current_mode"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.get_current_mode()</span></code></a> to query the current UI mode.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.switch_to_mode" title="substance_painter.ui.switch_to_mode"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.switch_to_mode()</span></code></a> to switch to some UI mode.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>This version introduces the modules:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="substance_painter/baking.html#module-substance_painter.baking" title="substance_painter.baking"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.baking</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/properties.html#module-substance_painter.properties" title="substance_painter.properties"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.properties</span></code></a></p></li>
+</ul>
+</section>
+<section id="substance-3d-painter-8-2-0">
+<h2>0.2.7 (Substance 3D Painter 8.2.0)<a class="headerlink" href="#substance-3d-painter-8-2-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></dt><dd><ul>
+<li><p>Add new values to <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Type" title="substance_painter.resource.Type"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.resource.Type</span></code></a> enumeration.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.children" title="substance_painter.resource.Resource.children"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.children()</span></code></a> to query child resources of a resource.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.parent" title="substance_painter.resource.Resource.parent"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.parent()</span></code></a> to query parent resource of a resource.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.MeshMapUsage" title="substance_painter.textureset.MeshMapUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.MeshMapUsage</span></code></a> to enumerate possible Mesh map usages.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.get_mesh_map_resource" title="substance_painter.textureset.TextureSet.get_mesh_map_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.get_mesh_map_resource()</span></code></a> to query the resource set as some Mesh map usage.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.set_mesh_map_resource" title="substance_painter.textureset.TextureSet.set_mesh_map_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.set_mesh_map_resource()</span></code></a> to replace the resource for some Mesh map usage.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/ui.html#module-substance_painter.ui" title="substance_painter.ui"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.ui</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_layout" title="substance_painter.ui.get_layout"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.get_layout()</span></code></a> to save UI layout state.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.get_layout_mode" title="substance_painter.ui.get_layout_mode"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.get_layout_mode()</span></code></a> to query the UI mode of a saved state.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.set_layout" title="substance_painter.ui.set_layout"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.set_layout()</span></code></a> to restore a saved UI state.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.reset_layout" title="substance_painter.ui.reset_layout"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.reset_layout()</span></code></a> to reset UI state to default.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></dt><dd><ul>
+<li><p>Add a new event <a class="reference internal" href="substance_painter/event.html#substance_painter.event.TextureStateEvent" title="substance_painter.event.TextureStateEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.TextureStateEvent</span></code></a> to be notified of document textures edition.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-8-1-2">
+<h2>0.2.6 (Substance 3D Painter 8.1.2)<a class="headerlink" href="#substance-3d-painter-8-1-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="substance_painter/project.html#substance_painter.project.create" title="substance_painter.project.create"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.create()</span></code></a> and <a class="reference internal" href="substance_painter/project.html#substance_painter.project.Settings" title="substance_painter.project.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.Settings</span></code></a>
+now supports using a custom unit scale for mesh size.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.all_mesh_names" title="substance_painter.textureset.TextureSet.all_mesh_names"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.all_mesh_names()</span></code></a> to query the list of mesh names used in a Texture Set.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/uvtile.html#substance_painter.textureset.UVTile.all_mesh_names" title="substance_painter.textureset.UVTile.all_mesh_names"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile.all_mesh_names()</span></code></a> to query the list of mesh names used in a UV Tile.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Usage" title="substance_painter.resource.Usage"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.resource.Usage</span></code></a> enumeration to describe resource usages.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Type" title="substance_painter.resource.Type"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.resource.Type</span></code></a> enumeration to describe resource types.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.category" title="substance_painter.resource.Resource.category"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.category()</span></code></a> to query the category of a resource.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.usages" title="substance_painter.resource.Resource.usages"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.usages()</span></code></a> to query the usages of a resource.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.gui_name" title="substance_painter.resource.Resource.gui_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.gui_name()</span></code></a> to query the name of a resource.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.type" title="substance_painter.resource.Resource.type"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.type()</span></code></a> to query the type of a resource.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.tags" title="substance_painter.resource.Resource.tags"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.tags()</span></code></a> to query the tags of a resource.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.internal_properties" title="substance_painter.resource.Resource.internal_properties"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.internal_properties()</span></code></a> to query a dictionnary of a resource internal properties.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-8-1-0">
+<h2>0.2.5 (Substance 3D Painter 8.1.0)<a class="headerlink" href="#substance-3d-painter-8-1-0" title="Link to this heading"></a></h2>
+<p>This version upgrades to Python 3.9.9.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="substance_painter/project.html#substance_painter.project.create" title="substance_painter.project.create"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.create()</span></code></a> supports PAINTER_ACE_CONFIG
+environment variable, to setup the project color management mode.</p></li>
+<li><p><a class="reference internal" href="substance_painter/project.html#substance_painter.project.create" title="substance_painter.project.create"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.create()</span></code></a> now raise an error if OCIO
+or PAINTER_ACE_CONFIG environment variable is set to an invalid
+configuration.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-7-4-3">
+<h2>0.2.4 (Substance 3D Painter 7.4.3)<a class="headerlink" href="#substance-3d-painter-7-4-3" title="Link to this heading"></a></h2>
+<p>This version exposes the tone mapping operator to the Python API, and adds
+a hook to execute code when Substance 3D Painter is not busy.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/display.html#module-substance_painter.display" title="substance_painter.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.display</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/display.html#substance_painter.display.get_tone_mapping" title="substance_painter.display.get_tone_mapping"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.display.get_tone_mapping()</span></code></a> to query the
+project tone mapping.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/display.html#substance_painter.display.set_tone_mapping" title="substance_painter.display.set_tone_mapping"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.display.set_tone_mapping()</span></code></a> to set the
+project tone mapping.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.execute_when_not_busy" title="substance_painter.project.execute_when_not_busy"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.execute_when_not_busy()</span></code></a> to execute
+code when Substance 3D Painter is no longer busy.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-7-4-0">
+<h2>0.2.3 (Substance 3D Painter 7.4.0)<a class="headerlink" href="#substance-3d-painter-7-4-0" title="Link to this heading"></a></h2>
+<p>This version makes it possible to work with JavaScript from the Python API.
+It also allows creating projects with OCIO color management capabilities.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/js.html#module-substance_painter.js" title="substance_painter.js"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.js</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/js.html#substance_painter.js.evaluate" title="substance_painter.js.evaluate"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.js.evaluate()</span></code></a> to evaluate some JavaScript code.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="substance_painter/project.html#substance_painter.project.create" title="substance_painter.project.create"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.create()</span></code></a> supports OCIO environment variable,
+to setup the project color management mode.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-7-3-0">
+<h2>0.2.2 (Substance 3D Painter 7.3.0)<a class="headerlink" href="#substance-3d-painter-7-3-0" title="Link to this heading"></a></h2>
+<p>This version adds functions to help with scripted project loading, project
+mesh reloading and UV Tiles manipulation. It also improves error handling
+in several modules.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/display.html#module-substance_painter.display" title="substance_painter.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.display</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="substance_painter/display.html#substance_painter.display.set_color_lut_resource" title="substance_painter.display.set_color_lut_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.display.set_color_lut_resource()</span></code></a> and
+<a class="reference internal" href="substance_painter/display.html#substance_painter.display.set_environment_resource" title="substance_painter.display.set_environment_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.display.set_environment_resource()</span></code></a> throw a
+TypeError instead of a ValueError when an argument has a type different
+from expected.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/event.html#substance_painter.event.Dispatcher.connect_strong" title="substance_painter.event.Dispatcher.connect_strong"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.event.Dispatcher.connect_strong()</span></code></a> to connect
+strong reference callbacks to the event dispatcher.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.is_busy" title="substance_painter.project.is_busy"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.is_busy()</span></code></a> to query whether Substance
+3D Painter is busy.</p></li>
+<li><p>Project saving functions are disabled when Substance 3D Painter is
+busy.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.last_imported_mesh_path" title="substance_painter.project.last_imported_mesh_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.last_imported_mesh_path()</span></code></a> to query the
+path to the last imported mesh.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.reload_mesh" title="substance_painter.project.reload_mesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.reload_mesh()</span></code></a> to load a new mesh in the
+current opened project.</p></li>
+<li><p><a class="reference internal" href="substance_painter/project.html#substance_painter.project.create" title="substance_painter.project.create"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.create()</span></code></a> throws a TypeError instead
+of a ValueError when its settings argument has a type different from
+expected.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.show_resources_in_ui" title="substance_painter.resource.show_resources_in_ui"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.show_resources_in_ui()</span></code></a> to highlight a
+list of resources in the aplication UI.</p></li>
+<li><p><a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.update_layer_stack_resource" title="substance_painter.resource.update_layer_stack_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.update_layer_stack_resource()</span></code></a> throws
+a TypeError when an argument has a type different from expected.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a> to interact with UV Tiles.
+Add ability to manipulate UV Tiles resolutions.</p></li>
+<li><p><a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.from_name" title="substance_painter.textureset.TextureSet.from_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.from_name()</span></code></a> throws a
+TypeError instead of a ValueError when its argument has a type different
+from expected.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-7-2-1">
+<h2>0.2.1 (Substance 3D Painter 7.2.1)<a class="headerlink" href="#substance-3d-painter-7-2-1" title="Link to this heading"></a></h2>
+<p>This version adds functions to list and update resources used by the layer
+stack.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.list_layer_stack_resources" title="substance_painter.resource.list_layer_stack_resources"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.list_layer_stack_resources()</span></code></a> to
+list resources used by the layer stack and mesh maps.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.update_layer_stack_resource" title="substance_painter.resource.update_layer_stack_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.update_layer_stack_resource()</span></code></a> to
+update resources used by the layer stack and mesh maps.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-3d-painter-7-2-0">
+<h2>0.2.0 (Substance 3D Painter 7.2.0)<a class="headerlink" href="#substance-3d-painter-7-2-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource.show_in_ui" title="substance_painter.resource.Resource.show_in_ui"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Resource.show_in_ui()</span></code></a> to highlight
+a resource in the UI.</p></li>
+<li><p>Modify <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Shelves.user_shelf" title="substance_painter.resource.Shelves.user_shelf"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.Shelves.user_shelf()</span></code></a> to take
+user settings into account.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Modify <a class="reference internal" href="substance_painter/textureset/index.html#substance_painter.textureset.ChannelType" title="substance_painter.textureset.ChannelType"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.ChannelType</span></code></a> to include
+the new available texture channels.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/ui.html#module-substance_painter.ui" title="substance_painter.ui"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.ui</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/ui.html#substance_painter.ui.add_plugins_toolbar_widget" title="substance_painter.ui.add_plugins_toolbar_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.ui.add_plugins_toolbar_widget()</span></code></a> to add
+a widget to the plugins toolbar.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-painter-7-1-0">
+<h2>0.1.0 (Substance Painter 7.1.0)<a class="headerlink" href="#substance-painter-7-1-0" title="Link to this heading"></a></h2>
+<p>This version adds several features to manage resources, shelves and UV Tiles.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectEditionEntered" title="substance_painter.event.ProjectEditionEntered"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.ProjectEditionEntered</span></code></a> event.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/event.html#substance_painter.event.ProjectEditionLeft" title="substance_painter.event.ProjectEditionLeft"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.ProjectEditionLeft</span></code></a> event.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/event.html#substance_painter.event.ShelfCrawlingStarted" title="substance_painter.event.ShelfCrawlingStarted"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.ShelfCrawlingStarted</span></code></a> event.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/event.html#substance_painter.event.ShelfCrawlingEnded" title="substance_painter.event.ShelfCrawlingEnded"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.event.ShelfCrawlingEnded</span></code></a> event.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.is_in_edition_state" title="substance_painter.project.is_in_edition_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.project.is_in_edition_state()</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Resource" title="substance_painter.resource.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.resource.Resource</span></code></a> to manipulate substance
+painter resources.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.search" title="substance_painter.resource.search"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.resource.search()</span></code></a> to search for available
+resources.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Shelf" title="substance_painter.resource.Shelf"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.resource.Shelf</span></code></a>.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/resource.html#substance_painter.resource.Shelves" title="substance_painter.resource.Shelves"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.resource.Shelves</span></code></a> for shelves manipulation
+facilities.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.all_uv_tiles" title="substance_painter.textureset.TextureSet.all_uv_tiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.all_uv_tiles()</span></code></a>.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/textureset.html#substance_painter.textureset.TextureSet.has_uv_tiles" title="substance_painter.textureset.TextureSet.has_uv_tiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.TextureSet.has_uv_tiles()</span></code></a>.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/uvtile.html#substance_painter.textureset.UVTile" title="substance_painter.textureset.UVTile"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.textureset.UVTile</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-painter-6-2-2">
+<h2>0.0.3 (Substance Painter 6.2.2)<a class="headerlink" href="#substance-painter-6-2-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/export.html#module-substance_painter.export" title="substance_painter.export"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.export</span></code></a></dt><dd><ul>
+<li><p>Document the use of existing export presets.</p></li>
+<li><p>Add a module overview example.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/channel.html#substance_painter.textureset.Channel.type" title="substance_painter.textureset.Channel.type"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.Channel.type()</span></code></a>.</p></li>
+<li><p>Add <a class="reference internal" href="substance_painter/textureset/stack.html#substance_painter.textureset.Stack.all_channels" title="substance_painter.textureset.Stack.all_channels"><code class="xref py py-func docutils literal notranslate"><span class="pre">substance_painter.textureset.Stack.all_channels()</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-painter-6-2-0">
+<h2>0.0.2 (Substance Painter 6.2.0)<a class="headerlink" href="#substance-painter-6-2-0" title="Link to this heading"></a></h2>
+<p>This version adapts the module <a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a> to the new
+UV Tile workflow.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></dt><dd><ul>
+<li><p>Add <a class="reference internal" href="substance_painter/project.html#substance_painter.project.ProjectWorkflow" title="substance_painter.project.ProjectWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.ProjectWorkflow</span></code></a>.</p></li>
+<li><p>Change the constructor of <a class="reference internal" href="substance_painter/project.html#substance_painter.project.Settings" title="substance_painter.project.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">substance_painter.project.Settings</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="substance-painter-6-1-0">
+<h2>0.0.1 (Substance Painter 6.1.0)<a class="headerlink" href="#substance-painter-6-1-0" title="Link to this heading"></a></h2>
+<p>Initial version of the Substance Painter Python API.</p>
+<p>It uses Python 3.7.6 and introduces the modules:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="substance_painter/index.html#module-substance_painter" title="substance_painter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/display.html#module-substance_painter.display" title="substance_painter.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.display</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/event.html#module-substance_painter.event" title="substance_painter.event"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.event</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/exception.html#module-substance_painter.exception" title="substance_painter.exception"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.exception</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/export.html#module-substance_painter.export" title="substance_painter.export"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.export</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/logging.html#module-substance_painter.logging" title="substance_painter.logging"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.logging</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/project.html#module-substance_painter.project" title="substance_painter.project"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.project</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/resource.html#module-substance_painter.resource" title="substance_painter.resource"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.resource</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/textureset/index.html#module-substance_painter.textureset" title="substance_painter.textureset"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.textureset</span></code></a></p></li>
+<li><p><a class="reference internal" href="substance_painter/ui.html#module-substance_painter.ui" title="substance_painter.ui"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter.ui</span></code></a></p></li>
+<li><p><a class="reference internal" href="plugins/substance_painter_plugins.html#module-substance_painter_plugins" title="substance_painter_plugins"><code class="xref py py-mod docutils literal notranslate"><span class="pre">substance_painter_plugins</span></code></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plugins/index.html" class="btn btn-neutral float-right" title="Writing plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Adobe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>
