@@ -1,3 +1,3 @@
 ---
-frameSrc: /api/api_index.html
+frameSrc: /api_index.html
 ---
