@@ -12,21 +12,19 @@ keywords:
 
 Painter version 10.1 moved from Qt5 to Qt6, which introduces breaking changes in Python plugins. The most notable change in the PySide modules going from version 2 to 6.
 
-Plugins created before version 10.1 of Painter will need to be updated to work in newer verisons.
+Plugins created before version 10.1 of Painter will need to be updated to work in newer versions.
 
 ## Pyside changes
 
----
-
 **Pyside** module name changed, so the import process is now different.
 
-Before:
-
-`from PySide2 import QtWidgets, QtGui`
-
-Now:
-
-`from PySide6 import QtWidgets, QtGui`
+> Before:
+>
+> `from PySide2 import QtWidgets, QtGui`
+>
+> Now:
+>
+> `from PySide6 import QtWidgets, QtGui`
 
 ---
 
