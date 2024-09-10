@@ -16,63 +16,57 @@ Plugins created before version 10.1 of Painter will need to be updated to work i
 
 ## Pyside changes
 
-**Pyside** module name changed, so the import process is now different.
+- **Pyside** module name changed, so the import process is now different.
+	> Before:
+	>
+	> `from PySide2 import QtWidgets, QtGui`
+	>
+	> Now:
+	>
+	> `from PySide6 import QtWidgets, QtGui`
 
-> Before:
->
-> `from PySide2 import QtWidgets, QtGui`
->
-> Now:
->
-> `from PySide6 import QtWidgets, QtGui`
-
----
-
-**QAction** is now under another module.
-
-Before:
-
-`QtWidgets.QAction`
-
-Now:
-
-`QtGui.QAction`
-
----
+- **QAction** is now under another module.
+	> Before:
+	>
+	> `QtWidgets.QAction`
+	>
+	> Now:
+	>
+	> `QtGui.QAction`
 
 **QKeySequence** operator changed from + (plus) to | (pipe) character.
 
-Before:
-
-`QtCore.Qt.CTRL + QtCore.Qt.Key_P`
-
-Now:
-
-`QtCore.Qt.CTRL | QtCore.Qt.Key_P`
+> Before:
+>
+> `QtCore.Qt.CTRL + QtCore.Qt.Key_P`
+>
+> Now:
+>
+> `QtCore.Qt.CTRL | QtCore.Qt.Key_P`
 
 ---
 
 **exec_()** function has been replaced by **exec()**.
 
-Before:
-
-`dialog.exec_()`
-
-Now:
-
-`dialog.exec()`
+> Before:
+>
+> `dialog.exec_()`
+>
+> Now:
+>
+> `dialog.exec()`
 
 ---
 
 **setMargin** is replaced by **setContentsMargins**.
 
-Before:
-
-`setMargin(10)`
-
-Now:
-
-`setContentsMargins(10, 10, 10, 10)`
+> Before:
+>
+> `setMargin(10)`
+>
+> Now:
+>
+> `setContentsMargins(10, 10, 10, 10)`
 
 ## Further information and guides
 
