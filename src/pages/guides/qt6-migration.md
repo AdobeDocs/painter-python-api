@@ -34,39 +34,32 @@ Plugins created before version 10.1 of Painter will need to be updated to work i
 	>
 	> `QtGui.QAction`
 
-**QKeySequence** operator changed from + (plus) to | (pipe) character.
+- **QKeySequence** operator changed from + (plus) to | (pipe) character.
+	> Before:
+	>
+	> `QtCore.Qt.CTRL + QtCore.Qt.Key_P`
+	>
+	> Now:
+	>
+	> `QtCore.Qt.CTRL | QtCore.Qt.Key_P`
 
-> Before:
->
-> `QtCore.Qt.CTRL + QtCore.Qt.Key_P`
->
-> Now:
->
-> `QtCore.Qt.CTRL | QtCore.Qt.Key_P`
+- **exec_()** function has been replaced by **exec()**.
+	> Before:
+	>
+	> `dialog.exec_()`
+	>
+	> Now:
+	>
+	> `dialog.exec()`
 
----
-
-**exec_()** function has been replaced by **exec()**.
-
-> Before:
->
-> `dialog.exec_()`
->
-> Now:
->
-> `dialog.exec()`
-
----
-
-**setMargin** is replaced by **setContentsMargins**.
-
-> Before:
->
-> `setMargin(10)`
->
-> Now:
->
-> `setContentsMargins(10, 10, 10, 10)`
+- **setMargin** is replaced by **setContentsMargins**.
+	> Before:
+	>
+	> `setMargin(10)`
+	>
+	> Now:
+	>
+	> `setContentsMargins(10, 10, 10, 10)`
 
 ## Further information and guides
 
