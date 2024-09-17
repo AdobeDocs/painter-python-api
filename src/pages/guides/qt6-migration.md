@@ -10,7 +10,7 @@ keywords:
 
 # Qt6 Migration
 
-Painter version 10.1 moved from Qt5 to Qt6, which introduces breaking changes in Python plugins. The most notable change in the PySide modules going from version 2 to 6.
+Painter version 10.1 moved from Qt5 to Qt6, which introduces breaking changes in Python plugins. The most notable change in the PySide module going from version 2 to 6.
 
 Plugins created before version 10.1 of Painter will need to be updated to work in newer versions.
 
