@@ -60,6 +60,10 @@ module.exports = {
 							{
 								title: "Using external plugins",
 								path: "/guides/loading-external-plugins/"
+							},
+							{
+								title: "Qt6 migration",
+								path: "/guides/qt6-migration/"
 							}
 						]
 					},
