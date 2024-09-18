@@ -61,6 +61,38 @@ Plugins created before version 10.1 of Painter will need to be updated to work i
 	>
 	> `setContentsMargins(10, 10, 10, 10)`
 
+## Dynamic check between Qt5 and Qt6
+
+Writing plugins that work over several versions of Painter will require to check which version of the PySide module is available. Here is a simple code snippet that show how to achieve this:
+
+```python
+# Qt5 vs Qt6 check import
+import importlib.util
+PysideSpec = importlib.util.find_spec("PySide2")
+IsQt5 = ( PysideSpec is not None )
+
+if IsQt5 :
+	from PySide2 import QtGui
+	from PySide2 import QtCore
+	from PySide2 import QtWidgets
+else :
+	from PySide6 import QtGui
+	from PySide6 import QtCore
+	from PySide6 import QtWidgets
+
+# Usage example
+ActionBuilder = None
+if IsQt5 :
+	ActionBuilder = QtWidgets.QAction
+else :
+	ActionBuilder = QtGui.QAction
+
+Action = ActionBuilder(
+	"My menu action",
+	triggered=MyFunctionToCall
+)
+```
+
 ## Further information and guides
 
 More information can be found on the Qt website:
