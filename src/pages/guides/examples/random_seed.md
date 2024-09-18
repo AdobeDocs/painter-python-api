@@ -33,10 +33,11 @@ import json
 import random
 from datetime import datetime
 
+import substance_painter as sp
+import substance_painter_plugins as spp
+
 # Qt5 vs Qt6 check
-import importlib.util
-PysideSpec = importlib.util.find_spec("PySide2")
-IsQt5 = ( PysideSpec is not None )
+IsQt5 = sp.application.version_info() < (10,1,0)
 
 if IsQt5 :
 	from PySide2 import QtGui
@@ -46,9 +47,6 @@ else :
 	from PySide6 import QtGui
 	from PySide6 import QtCore
 	from PySide6 import QtWidgets
-
-import substance_painter as sp
-import substance_painter_plugins as spp
 
 WIDGETS = []
 
