@@ -67,9 +67,8 @@ Writing plugins that work over several versions of Painter will require to check
 
 ```python
 # Qt5 vs Qt6 check import
-import importlib.util
-PysideSpec = importlib.util.find_spec("PySide2")
-IsQt5 = ( PysideSpec is not None )
+import substance_painter as sp
+IsQt5 = sp.application.version_info() < (10,1,0)
 
 if IsQt5 :
 	from PySide2 import QtGui
