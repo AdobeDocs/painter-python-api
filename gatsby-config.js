@@ -62,6 +62,10 @@ module.exports = {
 								path: "/guides/loading-external-plugins/"
 							},
 							{
+								title: "Remote control",
+								path: "/guides/remote-control/"
+							},
+							{
 								title: "Qt6 migration",
 								path: "/guides/qt6-migration/"
 							}
