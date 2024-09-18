@@ -33,9 +33,20 @@ import json
 import random
 from datetime import datetime
 
-from PySide2 import QtGui
-from PySide2 import QtCore
-from PySide2 import QtWidgets
+# Qt5 vs Qt6 check
+import importlib.util
+PysideSpec = importlib.util.find_spec("PySide2")
+IsQt5 = ( PysideSpec is not None )
+
+if IsQt5 :
+	from PySide2 import QtGui
+	from PySide2 import QtCore
+	from PySide2 import QtWidgets
+else :
+	from PySide6 import QtGui
+	from PySide6 import QtCore
+	from PySide6 import QtWidgets
+
 import substance_painter as sp
 import substance_painter_plugins as spp
 
@@ -126,7 +137,13 @@ def RandomizeSeed() :
 			Source.set_parameters( Parameters )
 
 def start_plugin():
-	Action = QtWidgets.QAction(
+	ActionBuilder = None
+	if IsQt5 :
+		ActionBuilder = QtWidgets.QAction
+	else :
+		ActionBuilder = QtGui.QAction
+
+	Action = ActionBuilder(
 		"Randomize all seeds",
 		triggered=RandomizeSeed
 	)
