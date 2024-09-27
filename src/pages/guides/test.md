@@ -16,9 +16,9 @@ Painter version 10.1 moved from Qt5 to Qt6, which introduces breaking changes in
 
 # Export module
 
-<div style="background-color:#F00">
+<div style="background-color:#BCBCBC;padding:8px;border-radius:4px">
 
-### class substance_painter.export.ExportStatus(value)
+class **substance_painter.export.ExportStatus**(value)
 
 Status code of the export process.
 
@@ -35,4 +35,28 @@ Members:
 
 The name used to define members is available as a string via the _.name_ attribute (see [python enum.Enum](https://docs.python.org/3/library/enum.html#enum.Enum)).
 
+<br/>
+</div>
+
+# Export Textures
+
+<div style="background-color:#BCBCBC;padding:8px;border-radius:4px">
+
+**substance_painter.export.list_project_textures**(json_config: dict) → Dict[Tuple[str, str], List[str]]
+
+Get list of textures that would be exported according to the given JSON configuration.
+
+- **Parameters**:
+  - **json_config** (dict) – JSON object representing the export configuration to be used. See JSON configuration.
+- **Returns**: List of texture files that would be exported, grouped by stack (Texture Set name, stack name).
+- **Return type**: Dict[Tuple[str, str], List[str]]
+- **Raises**:
+  - **ProjectError** – If no project is opened.
+  - **ValueError** – If json_config is ill-formed, or is invalid in the context of the current project. Contains a human readable message.
+
+<InlineAlert variant="info" slots="text" />
+
+export_project_textures().
+ 
+<br/>
 </div>
