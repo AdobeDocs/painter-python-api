@@ -1,5 +1,5 @@
 ---
-title: Qt6 Migration - Painter Python API
+title: Remote Control - Painter Python API
 description: Substance 3D Painter - Python API
 keywords:
   - Creative Cloud
@@ -8,7 +8,7 @@ keywords:
   - Painter
 ---
 
-# Remote control
+# Remote control / headless
 
 This page describes how to control the application remotely to execute Javascript or Python commands.
 
